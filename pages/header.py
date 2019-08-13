@@ -68,6 +68,7 @@ class Header:
 
     def get_text_of_first_link(self):
         self.browser.wait_of_quantity_elements(self.locators.LINKS, 3)
+
         return self.browser.get_elements(self.locators.LINKS)[1].text
 
     def go_to_allVacancies(self):
