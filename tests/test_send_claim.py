@@ -18,3 +18,5 @@ def test_send_claim(app):
     app.companies_page.click_show_claims_button()
     text = app.companies_page.find_description('description')
     assert text == 'description'
+
+    print('H')
