@@ -1,7 +1,8 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
-
+from config import TIMEOUT
+import time
 
 class DriverWrapper(object):
     """Webdriver wrapper"""
@@ -90,6 +91,8 @@ class DriverWrapper(object):
         return data_list
 
     def get_text_of_element(self, locator):
+        """ Get text from element """
+        WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.get_element(locator).text
 
     def pause(self, time):
@@ -130,3 +133,30 @@ class DriverWrapper(object):
         """Returns all elements for the specific locator"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.driver.find_elements(*locator)
+
+    def wait_element_with_text(self, locator, text, timeout=TIMEOUT):
+        """ Wait while element with certain text appears """
+        end = time.time() + timeout
+
+        while time.time() < end:
+            elements = self.get_elements(locator)
+            for element in elements:
+                try:
+                    if element.text == text:
+                        return element
+                except:
+                    pass
+        print('====data:', locator, text)
+        raise Exception("Time out to find element")
+
+    def wait_of_quantity_elements(self, locator, quantity, timeout=TIMEOUT):
+        """ Wait while on page will be certain quantity of elements"""
+        end = time.time() + timeout
+
+        while time.time() < end:
+            elements = self.get_elements(locator)
+            if len(elements) >= quantity:
+                return
+        print('====data:', locator, quantity, len(elements))
+        raise Exception("No enougth elements")
+

@@ -6,7 +6,7 @@ from locators import LocatorsYourResume
 
 class Header:
     """Header page, which will be inherited by other pages"""
-    def  __init__(self, browser):
+    def __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
         self.locator_create_company = LocatorsCreateCompanyPage
@@ -24,16 +24,17 @@ class Header:
 
     def click_log_out(self):
         """Clicks on the round icon"""
-        self.browser.click_element_by_text_simple(self.locators.LOG_OUT)
+        self.browser.click_element_by_text(self.locators.LOG_OUT, "Log out")
 
     def click_log_in(self):
         """Clicks on the round icon"""
-        self.browser.click_element_by_text_simple(self.locators.LOG_IN)
+        self.browser.wait_element_with_text(self.locators.LOG_IN, "Log in")
+        self.browser.click_element_by_text(self.locators.LOG_IN, "Log in")
 
     def is_logined(self):
         """ Check if user logined: if 'logout' button exist == logined """
         self.click_icon()
-        log_out = self.browser.get_elements_by_text(self.locators.LOG_OUT)
+        log_out = self.browser.wait_element_with_text(self.locators.LOG_OUT, "Log out")
         return log_out.text == 'Log out'
 
     def select_option(self, pick_item):
@@ -84,7 +85,10 @@ class Header:
         self.browser.click_element(self.locator_my_companies.MY_COMPANIES)
 
     def get_text_of_first_link(self):
-        self.browser.pause(PAUSE)
+        # self.browser.wait_element_with_text(self.locators.ICON, '')
+        # self.browser.driver.execute_script('$(document).ready(function(){});')
+        self.browser.wait_of_quantity_elements(self.locators.LINKS, 3)
+        print(self.browser.get_elements(self.locators.LINKS)[1].text)
         return self.browser.get_elements(self.locators.LINKS)[1].text
 
     def go_to_allVacancies(self):
