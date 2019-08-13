@@ -1,3 +1,4 @@
+from pages.company_details_page import CompanyDetailsPage
 from pages.header import Header
 from pages.sign_in_page import SignInPage
 from pages.vacancies_page import VacanciesPage
@@ -21,3 +22,4 @@ class Application():
         self.edit_resume_page = EditResumePage(self.driver_init)
         self.view_company_page = ViewCompanyPage(self.driver_init)
         self.companies_page = CompaniesPage(self.driver_init)
+        self.company_details_page = CompanyDetailsPage(self.driver_init)

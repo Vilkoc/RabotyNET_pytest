@@ -5,7 +5,7 @@ class WebdriverSelection():
     @staticmethod
     def get_webdriver(browser_name):
         if browser_name.lower() == 'chrome':
-            return webdriver.Chrome()
+            return webdriver.Chrome(executable_path='c:/chromedriver.exe')
         elif browser_name.lower() == 'firefox':
             return webdriver.Firefox()
         elif browser_name.lower() == 'opera':
