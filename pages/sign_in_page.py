@@ -1,7 +1,7 @@
 from locators import LocatorsSignIn
 from credentials import Credentials
 
-import inspect
+# import inspect
 
 
 class SignInPage:
@@ -28,8 +28,8 @@ class SignInPage:
 
     def enter_sign_in_email(self, email):
         self.browser.send_keys(self.locators.EMAIL_SIGN_IN, email)
-        for i in inspect.stack():
-            print('====debug===', i[2], i[3], i[4])
+        # for i in inspect.stack():
+        #     print('====debug===', i[2], i[3], i[4])
 
     def enter_sign_in_password(self, password):
         self.browser.send_keys(self.locators.PASSWORD_SIGN_IN, password)

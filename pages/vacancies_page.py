@@ -12,7 +12,7 @@ class VacanciesPage:
 
     def is_confirmation_sent(self):
         text = self.browser.get_text_of_element(self.locators.POP_UP_WINDOW_SIGN_UP_TEXT)
-        print(text)
+        # print(text)
         return text == 'User has been created successfully. Confirm your email and login into site!'
 
     def click_confirmation_link(self, link):
