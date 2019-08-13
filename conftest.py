@@ -1,6 +1,6 @@
 import pytest
 from application import Application
-from wrapper import DriverWrapper
+from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db

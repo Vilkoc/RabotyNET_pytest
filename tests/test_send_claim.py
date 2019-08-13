@@ -1,6 +1,3 @@
-from conftest import app
-
-
 def test_send_claim(app):
     app.header.select_option('Log in')
     app.sign_in_page.login('USER')
@@ -16,5 +13,4 @@ def test_send_claim(app):
     app.header.select_option('Log in')
     app.sign_in_page.login("ADMIN")
     app.companies_page.click_show_claims_button()
-    text = app.companies_page.find_description('description')
-    assert text == 'description'
+    assert app.companies_page.find_description('description')

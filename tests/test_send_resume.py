@@ -1,6 +1,3 @@
-from conftest import app
-
-
 def test_send_resume(app):
     app.header.select_option('Log in')
     app.sign_in_page.login('USER')
