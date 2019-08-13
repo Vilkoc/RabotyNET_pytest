@@ -6,6 +6,10 @@ from pages.preview_resume_page import PreviewResumePage
 from pages.edit_resume_page import EditResumePage
 from pages.view_company_page import ViewCompanyPage
 from pages.companies_page import CompaniesPage
+from pages.my_companies_page import MyCompaniesPage
+from pages.update_company_page import UpdateCompanyPage
+from pages.create_vacancy_page import CreateVacancyPage
+from pages.create_company_page import CreateCompanyPage
 
 
 class Application():
@@ -21,3 +25,8 @@ class Application():
         self.edit_resume_page = EditResumePage(self.driver_init)
         self.view_company_page = ViewCompanyPage(self.driver_init)
         self.companies_page = CompaniesPage(self.driver_init)
+        self.my_companies_page = MyCompaniesPage(self.driver_init)
+        self.update_company_page = UpdateCompanyPage(self.driver_init)
+        self.create_vacancy_page = CreateVacancyPage(self.driver_init)
+        self.create_company_page = CreateCompanyPage(self.driver_init)
+
