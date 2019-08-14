@@ -109,11 +109,12 @@ class DriverWrapper(object):
         """Special function for press 'Change' button"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_wait))
         buttons = self.get_elements(locator_buttons)
-        change = None
-        for i in buttons:
-            if i.text == 'Change':
-                change = i
-        change.click()
+        # change = None
+        for button in buttons:
+            if button.text == 'Change':
+                button.click()
+                break
+        # change.click()
 
     def invisibility_of_element(self, locator):
         """This function wait until element will be invisible"""
