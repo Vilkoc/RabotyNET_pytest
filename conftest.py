@@ -4,6 +4,7 @@ from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
+import os
 
 
 @pytest.fixture(scope='function')
@@ -25,4 +26,11 @@ def app(browser_init):
 @pytest.fixture(scope='session')
 def prep_db():
     prepare_db()
-    print('===============NNNNNN================')
+
+
+@pytest.fixture(scope='session')
+def del_results():
+    path = 'C:/Users/Nazar/Desktop/RabotyNET_pytest/report'
+    file_list = [f for f in os.listdir(path) if f.endswith(".json")]
+    for f in file_list:
+        os.remove(os.path.join(path, f))
