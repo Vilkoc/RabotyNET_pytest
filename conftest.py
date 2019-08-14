@@ -19,7 +19,7 @@ def browser_init():
 def app(browser_init):
     selenium_test_base = Application(browser_init)
     yield selenium_test_base
-    #browser_init.driver.quit()
+    browser_init.driver.quit()
 
 
 @pytest.fixture(scope='session')
