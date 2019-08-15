@@ -1,7 +1,6 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
-from config import TIMEOUT
 import time
 
 
@@ -37,11 +36,8 @@ class DriverWrapper(object):
 
     def click_element_by_text(self, locator, text_value):
         """Clicks on the element with text attribute text_value"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
-        elements = self.get_elements(locator)
-        for element in elements:
-            if element.text == text_value:
-                element.click()
+        element = self.wait_element_with_text(locator, text_value, timeout=10)
+        element.click()
 
     def click_element_by_text_simple(self, locator_and_text):
         """Clicks on the element with text attribute text_value"""
@@ -69,35 +65,29 @@ class DriverWrapper(object):
 
     def get_attr_value(self, locator, attr):
         """Get attribute value of the element"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
-        element = self.get_element(locator)
-        return element.get_attribute(attr)
+        value = self.wait_element_with_attr(locator, attr, timeout=10)
+        return value
 
     def company_view_update_delete(self, locator1, locator2, company_name):
         """This function clicks on company details/update/delete buttons
          according to the company name and specific locators"""
         tbody = self.driver.find_elements(*locator1)
-        for element in tbody:
-            if company_name in element.text:
-                td = element.find_element(*locator2)
+        for i in tbody:
+            if company_name in i.text:
+                td = i.find_element(*locator2)
                 td.click()
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
         data_list = []
         for el in range(len(locator_list)):
-            data = self.driver.find_element_by_id(locator_list[el]).get_attribute(
+            a = self.driver.find_element_by_id(locator_list[el]).get_attribute(
                 locator_attribute)
-            data_list.append(data)
+            data_list.append(a)
         return data_list
 
     def get_text_of_element(self, locator):
-        """ Get text from element """
-        WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.get_element(locator).text
-
-    def pause(self, time):
-        webdriver.support.wait.time.sleep(time)
 
     def click_element_double_locator(self, locator_wait, locator_element):
         """This function takes two locators, first one for 'WebDriverWait', the second one for click on the element"""
@@ -135,7 +125,7 @@ class DriverWrapper(object):
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.driver.find_elements(*locator)
 
-    def wait_element_with_text(self, locator, text, timeout=TIMEOUT):
+    def wait_element_with_text(self, locator, text, timeout=10):
         """ Wait while element with certain text appears """
         end = time.time() + timeout
 
@@ -150,13 +140,12 @@ class DriverWrapper(object):
         print('====data:', locator, text)
         raise Exception("Time out to find element")
 
-    def wait_of_quantity_elements(self, locator, quantity, timeout=TIMEOUT):
-        """ Wait while on page will be certain quantity of elements"""
+    def wait_element_with_attr(self, locator, attr, timeout=10):
+        """ Wait while element with certain text appears """
         end = time.time() + timeout
-
         while time.time() < end:
-            elements = self.get_elements(locator)
-            if len(elements) >= quantity:
-                return
-        print('====data:', locator, quantity, len(elements))
-        raise Exception("No enougth elements")
+            element = self.get_element(locator)
+            try:
+                return element.get_attribute(attr)
+            except:
+                pass
