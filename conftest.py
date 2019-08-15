@@ -22,7 +22,7 @@ def app(browser_init):
     browser_init.driver.quit()
 
 
-@pytest.fixture(scope='session', autouse='True')
-def prep_db():
-    prepare_db()
+# @pytest.fixture(scope='session', autouse='True')
+# def prep_db():
+#      prepare_db()
 
