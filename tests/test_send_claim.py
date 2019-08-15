@@ -2,7 +2,7 @@ import allure
 
 
 @allure.feature('Sending claim')
-def test_send_claim(app):
+def test_send_claim(app, prep_db):
     with allure.step('Log in as user'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')

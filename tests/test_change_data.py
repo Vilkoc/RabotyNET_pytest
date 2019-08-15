@@ -27,3 +27,4 @@ def test_change_data(app, del_results):
         app.preview_resume_page.click_change_button()
         text = app.edit_resume_page.confirmation_changes()
         assert text == 'Middle Developer'
+

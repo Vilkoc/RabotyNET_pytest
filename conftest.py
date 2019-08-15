@@ -5,6 +5,7 @@ from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
 import os
+from utilities.del_from_db import delete_from_vacancy_resume
 
 
 @pytest.fixture(scope='function')
@@ -25,7 +26,7 @@ def app(browser_init):
 
 @pytest.fixture(scope='session')
 def prep_db():
-    prepare_db()
+    delete_from_vacancy_resume()
 
 
 @pytest.fixture(scope='session')
@@ -34,3 +35,14 @@ def del_results():
     file_list = [f for f in os.listdir(path) if f.endswith(".json")]
     for f in file_list:
         os.remove(os.path.join(path, f))
+
+
+# @pytest.fixture(scope='session')
+# def allure_run(request):
+#     def allure1():
+#         p = subprocess.Popen(["powershell.exe",
+#                               "C:/Users/Nazar/Desktop/Allure.ps1"],
+#                              stdout=sys.stdout)
+#         p.communicate()
+#
+#     request.addfinalizer(allure1)
