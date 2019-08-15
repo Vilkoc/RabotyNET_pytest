@@ -40,3 +40,39 @@ def test_forgot_password(app):
     login(page.sign_in_page, USERNAME_PASSW_RECOVERY, OLD_PASSWORD)
     with allure.step('Is user authenticated?'):
         assert page.header.is_logined()
+
+
+@pytest.mark.skip(reason="just for test skipping")
+def test_forgot_password(app):
+    """ Testcase to renew password using email"""
+    page = app
+    page.header.click_icon()
+    page.header.click_log_in()
+
+    page.sign_in_page.click_forgot_password()
+
+    page.forgot_password_page.enter_login_email(USERNAME_PASSW_RECOVERY)
+    page.forgot_password_page.click_submit_button()
+
+    with allure.step('Is instruction sent on email?'):
+        assert page.vacancies_page.is_instructions_sent()
+    page.vacancies_page.click_ok()
+
+    change_varification_link(USERNAME_PASSW_RECOVERY)
+    link = 'http://localhost:4200/confirmPassword?token=3e83667c-c59c-4fda-aa7a-a47346a3cd6a'
+
+    page.vacancies_page.click_confirmation_link(link)
+
+    page.confirmation_password_page.enter_new_password(NEW_PASSWORD)
+    page.confirmation_password_page.enter_confirm_password(NEW_PASSWORD)
+    page.confirmation_password_page.click_register_button()
+
+    with allure.step('Pop up window messaging "password restore"'):
+        assert page.sign_in_page.is_password_restored()
+    page.sign_in_page.click_ok()
+
+    login(page.sign_in_page, USERNAME_PASSW_RECOVERY, OLD_PASSWORD)
+    with allure.step('Is user authenticated?'):
+        assert page.header.is_logined()
+
+
