@@ -2,7 +2,7 @@ import allure
 
 
 @allure.feature('Changing data')
-def test_change_data(app, del_results):
+def test_change_data(app):
     with allure.step('Log in'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')

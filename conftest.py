@@ -31,18 +31,18 @@ def prep_db():
 
 @pytest.fixture(scope='session')
 def del_results():
-    path = 'C:/Users/Nazar/Desktop/RabotyNET_pytest/report'
+    path = 'C:/Users/Nazar/Desktop/RabotyNET_pytest/allure-results'
     file_list = [f for f in os.listdir(path) if f.endswith(".json")]
     for f in file_list:
         os.remove(os.path.join(path, f))
 
 
-# @pytest.fixture(scope='session')
-# def allure_run(request):
-#     def allure1():
-#         p = subprocess.Popen(["powershell.exe",
-#                               "C:/Users/Nazar/Desktop/Allure.ps1"],
-#                              stdout=sys.stdout)
-#         p.communicate()
-#
-#     request.addfinalizer(allure1)
+@pytest.fixture(scope='session')
+def allure_run(request):
+    def allure1():
+        p = subprocess.Popen(["powershell.exe",
+                               "C:/Users/Nazar/Desktop/Allure.ps1"],
+                             stdout=sys.stdout)
+        p.communicate()
+
+    request.addfinalizer(allure1)
