@@ -22,6 +22,6 @@ def app(browser_init):
     browser_init.driver.quit()
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session', autouse=True)
 def prep_db():
     prepare_db()
