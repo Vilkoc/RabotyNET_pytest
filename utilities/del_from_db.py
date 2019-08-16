@@ -21,9 +21,6 @@ def delete_from_vacancy_resume():
         cur.close()
         con.close()
 
-    # for r in rows:
-    #     print(f'v_id: {r[0]} r_id: {r[1]}')
-
 
 def delete_from_claim():
     con = psycopg2.connect(host='localhost',
@@ -44,8 +41,3 @@ def delete_from_claim():
     else:
         cur.close()
         con.close()
-
-    # for r in rows:
-    #     print(f'v_id: {r[0]} r_id: {r[1]}')
-
-

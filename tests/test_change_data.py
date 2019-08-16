@@ -2,7 +2,7 @@ import allure
 
 
 @allure.feature('Changing data')
-def test_change_data(app):
+def test_change_data(app, make_screen):
     with allure.step('Log in'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')
@@ -27,4 +27,3 @@ def test_change_data(app):
         app.preview_resume_page.click_change_button()
         text = app.edit_resume_page.confirmation_changes()
         assert text == 'Middle Developer'
-

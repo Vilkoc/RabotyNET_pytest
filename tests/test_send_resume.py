@@ -2,7 +2,7 @@ import allure
 
 
 @allure.feature('Sending resume')
-def test_send_resume(app):
+def test_send_resume(app, prep_db, make_screen):
     with allure.step('Log in as user'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')

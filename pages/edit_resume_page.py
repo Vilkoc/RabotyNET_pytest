@@ -16,5 +16,6 @@ class EditResumePage():
         self.browser.click_element(self.locators.PREVIEW_PDF_BUTTON)
 
     def confirmation_changes(self):
+        self.browser.driver.execute_script("window.scrollTo(0, 0);")
         text = self.browser.get_attr_value(self.locators.POSITION_FIELD, self.locators.GET_TEXT_FROM_FIELD)
         return text

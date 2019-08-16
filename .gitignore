@@ -11,6 +11,8 @@ __pycache__/
 pages/__pycache__
 sample.png
 tests/sample.png
+allure-results/
+
 
 
 
