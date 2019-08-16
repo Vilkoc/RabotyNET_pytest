@@ -1,0 +1,71 @@
+[ {
+  "uid" : "3cbcb5c1594682c0",
+  "name" : "test_delete_company",
+  "time" : {
+    "start" : 1565962988958,
+    "stop" : 1565962991255,
+    "duration" : 2297
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b39abc249d745f82",
+  "name" : "test_change_data",
+  "time" : {
+    "start" : 1565962950569,
+    "stop" : 1565962954747,
+    "duration" : 4178
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "28cb4cdddd2cc956",
+  "name" : "test_update_company_name",
+  "time" : {
+    "start" : 1565963057895,
+    "stop" : 1565963060230,
+    "duration" : 2335
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "4a525ec1eef11ec8",
+  "name" : "test_send_resume",
+  "time" : {
+    "start" : 1565963016000,
+    "stop" : 1565963049342,
+    "duration" : 33342
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a8d797782faea3ce",
+  "name" : "test_send_claim",
+  "time" : {
+    "start" : 1565962999736,
+    "stop" : 1565963007472,
+    "duration" : 7736
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c3c78891fd1a3c92",
+  "name" : "test_create_company",
+  "time" : {
+    "start" : 1565962963261,
+    "stop" : 1565962966548,
+    "duration" : 3287
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "19b7a6b42e69c146",
+  "name" : "test_create_vacancy",
+  "time" : {
+    "start" : 1565962975251,
+    "stop" : 1565962980471,
+    "duration" : 5220
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

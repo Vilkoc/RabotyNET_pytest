@@ -2,14 +2,16 @@ from data_tests.cowner_data import CownerData
 import allure
 
 
-@allure.feature("Delete company")
+@allure.feature("Deleting of the company")
 def test_delete_company(app):
 
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)
         app.sign_in_page.login(CownerData.PERSON)
-    with allure.step("All companies"):
+    with allure.step("Click the 'All companies' on the header"):
         app.header.click_my_companies()
-    app.my_companies_page.click_company_delete(CownerData.COMPANY_DELETE)
-    check = app.my_companies_page.check_company_present(CownerData.COMPANY_DELETE)
-    assert check
+    with allure.step("Delete the company "):
+        app.my_companies_page.click_company_delete(CownerData.COMPANY_DELETE)
+    with allure.step("Check the result"):
+        check = app.my_companies_page.check_company_present(CownerData.COMPANY_DELETE)
+        assert check

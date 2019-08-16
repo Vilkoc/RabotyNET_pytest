@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Aug 16 16:43:19 EEST 2019","Fri Aug 16 16:43:27 EEST 2019","7736","tests","test_send_claim","","","","test_send_claim",""
+"broken","Fri Aug 16 16:42:43 EEST 2019","Fri Aug 16 16:42:46 EEST 2019","3287","tests","test_create_company","","","","test_create_company",""
+"passed","Fri Aug 16 16:43:08 EEST 2019","Fri Aug 16 16:43:11 EEST 2019","2297","tests","test_delete_company","","","","test_delete_company",""
+"passed","Fri Aug 16 16:42:55 EEST 2019","Fri Aug 16 16:43:00 EEST 2019","5220","tests","test_create_vacancy","","","","test_create_vacancy",""
+"broken","Fri Aug 16 16:44:17 EEST 2019","Fri Aug 16 16:44:20 EEST 2019","2335","tests","test_update_company_name","","","","test_update_company_name",""
+"broken","Fri Aug 16 16:43:36 EEST 2019","Fri Aug 16 16:44:09 EEST 2019","33342","tests","test_send_resume","","","","test_send_resume",""
+"passed","Fri Aug 16 16:42:30 EEST 2019","Fri Aug 16 16:42:34 EEST 2019","4178","tests","test_change_data","","","","test_change_data",""

@@ -1,0 +1,138 @@
+{
+  "1dda964a0919eef33c55af8b3851542e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "19b7a6b42e69c146",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962975251,
+        "stop" : 1565962980471,
+        "duration" : 5220
+      }
+    } ]
+  },
+  "20af8b13da07d3f58854f4bddc5f0640" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4a525ec1eef11ec8",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1565963016000,
+        "stop" : 1565963049342,
+        "duration" : 33342
+      }
+    } ]
+  },
+  "7903ef72028fef10228286b47c4b7fd3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a8d797782faea3ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962999736,
+        "stop" : 1565963007472,
+        "duration" : 7736
+      }
+    } ]
+  },
+  "108d8b600115b65fbab8bab440000afd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "28cb4cdddd2cc956",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: chrome=76.0.3809.100)",
+      "time" : {
+        "start" : 1565963057895,
+        "stop" : 1565963060230,
+        "duration" : 2335
+      }
+    } ]
+  },
+  "e5e14ae71ac788e6fdfd61eabdf7c81f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c3c78891fd1a3c92",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None\nMessage: unexpected alert open: {Alert text : Company with that name already exists!}\n  (Session info: chrome=76.0.3809.100)",
+      "time" : {
+        "start" : 1565962963261,
+        "stop" : 1565962966548,
+        "duration" : 3287
+      }
+    } ]
+  },
+  "c493955c1e04bebf091e2c77194ee4aa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b39abc249d745f82",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962950569,
+        "stop" : 1565962954747,
+        "duration" : 4178
+      }
+    } ]
+  },
+  "66b6031066acadea020a78f620f01c3f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3cbcb5c1594682c0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962988958,
+        "stop" : 1565962991255,
+        "duration" : 2297
+      }
+    } ]
+  }
+}

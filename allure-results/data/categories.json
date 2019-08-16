@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None\nMessage: unexpected alert open: {Alert text : Company with that name already exists!}\n  (Session info: chrome=76.0.3809.100)",
+      "children" : [ {
+        "name" : "test_create_company",
+        "uid" : "c3c78891fd1a3c92",
+        "parentUid" : "d603f1e4cc34b8b9fa65aa89b57dfe4c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1565962963261,
+          "stop" : 1565962966548,
+          "duration" : 3287
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d603f1e4cc34b8b9fa65aa89b57dfe4c"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_send_resume",
+        "uid" : "4a525ec1eef11ec8",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1565963016000,
+          "stop" : 1565963049342,
+          "duration" : 33342
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: chrome=76.0.3809.100)",
+      "children" : [ {
+        "name" : "test_update_company_name",
+        "uid" : "28cb4cdddd2cc956",
+        "parentUid" : "a22b70d88060c349be2efc7548a0c1e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1565963057895,
+          "stop" : 1565963060230,
+          "duration" : 2335
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a22b70d88060c349be2efc7548a0c1e3"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}
