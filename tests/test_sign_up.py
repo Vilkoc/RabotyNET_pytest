@@ -3,6 +3,8 @@ import allure
 from utilities.func import login
 from utilities.db import change_varification_link, wait_user_update
 
+@allure.feature('Sign up test')
+@allure.story('Sign up test story')
 def test_sign_up(app, make_screen):
     """ Testcase for sign up user. """
     page = app

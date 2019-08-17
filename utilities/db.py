@@ -2,7 +2,7 @@ import psycopg2
 from config import DB_FILE, DB_NAME, DB_USER, DB_PASS, DB_HOST, TOMCAT_PATH
 import time
 from config import TIMEOUT
-
+import subprocess
 
 def prepare_db():
     table_list = ['users', 'contact', 'address', 'claim', 'company', 'education', 'job',
@@ -48,5 +48,6 @@ def wait_user_update(user, timeout=TIMEOUT):
 
 
 def restart_tomcat():
-    os.popen(TOMCAT_PATH + 'bin/startup.bat')
-    os.popen(TOMCAT_PATH + 'bin/shutdown.bat')
+    subprocess.call('shutdown.bat', shell=True, cwd=TOMCAT_PATH)
+    time.sleep(TIMEOUT)
+    subprocess.Popen(TOMCAT_PATH + 'startup.bat', stdout=subprocess.PIPE, shell=True, cwd=TOMCAT_PATH)

@@ -3,6 +3,7 @@ import pytest
 import allure
 
 @allure.feature('Login test')
+@allure.story('Login test story')
 @pytest.mark.parametrize('user, password, expected', [
     ('admin@gmail.com', 'admin', 'Сompanies'),
     ('user@gmail.com', 'user', 'Create company1'),
@@ -14,7 +15,6 @@ def test_login_logout(app, make_screen, user, password, expected):
     page = app
 
     page.header.click_icon()
-    # raise Exception
     page.header.click_log_in()
 
     page.sign_in_page.enter_sign_in_email(user)

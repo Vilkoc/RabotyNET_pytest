@@ -3,11 +3,11 @@ from application import Application
 from wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
-from utilities.db import prepare_db
-import os
+from utilities.db import prepare_db, restart_tomcat
 
 import allure
 from allure_commons.types import AttachmentType
+from time import sleep
 
 
 @pytest.fixture(scope='function')
@@ -41,5 +41,9 @@ def make_screen(browser_init, request):
 
 
 @pytest.fixture(scope='session', autouse=True)
-def prep_db():
-    prepare_db()
+def prep_db(worker_id):
+    print('===== worker id====', worker_id)
+    if worker_id == 'gw0' or worker_id == 'master':
+        restart_tomcat()
+        prepare_db()
+    sleep(40)
