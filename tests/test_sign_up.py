@@ -3,7 +3,7 @@ import allure
 from utilities.func import login
 from utilities.db import change_varification_link, wait_user_update
 
-def test_sign_up(app):
+def test_sign_up(app, make_screen):
     """ Testcase for sign up user. """
     page = app
     page.header.click_icon()
@@ -30,7 +30,7 @@ def test_sign_up(app):
         assert page.header.is_logined()
 
 
-def test_sign_up_negative_email(app):
+def test_sign_up_negative_email(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using email already registered user"""
     page = app
@@ -48,7 +48,7 @@ def test_sign_up_negative_email(app):
         assert page.vacancies_page.is_email_taken()
 
 
-def test_sign_up_negative_password(app):
+def test_sign_up_negative_password(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using incorect password """
     page = app
@@ -65,7 +65,7 @@ def test_sign_up_negative_password(app):
     with allure.step('Is message about wrong password?'):
         assert page.sign_in_page.is_password_sign_up_wrong()
 
-def test_sign_up_negative_email_wrong(app):
+def test_sign_up_negative_email_wrong(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using incorect email """
     page = app
@@ -82,7 +82,7 @@ def test_sign_up_negative_email_wrong(app):
     with allure.step('Is message about wrong email?'):
         assert page.sign_in_page.is_email_wrong()
 
-def test_sign_up_negative_password_mismatch(app):
+def test_sign_up_negative_password_mismatch(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using differen password and matching password """
     page = app

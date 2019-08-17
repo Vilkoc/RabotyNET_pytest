@@ -2,19 +2,19 @@ import pytest
 
 import allure
 
-# @pytest.mark.usefixtures('resource_setup1')
-@allure.story('Login test')
+@allure.feature('Login test')
 @pytest.mark.parametrize('user, password, expected', [
     ('admin@gmail.com', 'admin', 'Сompanies'),
     ('user@gmail.com', 'user', 'Create company1'),
     ('cowner@gmail.com', 'cowner', 'My companies')
     ])
-def test_login_logout(app, user, password, expected):
+def test_login_logout(app, make_screen, user, password, expected):
     """ Testcase for user login.
         Try to login for each user"""
     page = app
 
     page.header.click_icon()
+    # raise Exception
     page.header.click_log_in()
 
     page.sign_in_page.enter_sign_in_email(user)

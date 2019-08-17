@@ -4,11 +4,16 @@ from wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
+import os
+
+import allure
+from allure_commons.types import AttachmentType
 
 
 @pytest.fixture(scope='function')
 def browser_init():
-    driver = WebdriverSelection().get_webdriver(WEBDRIVER)
+    # driver = WebdriverSelection().get_webdriver(WEBDRIVER)
+    driver = WebdriverSelection().get_webdriver('chrome_inc')
     driver.maximize_window()
     driver.get(URL)
     browser = DriverWrapper(driver, TIMEOUT)
@@ -22,7 +27,19 @@ def app(browser_init):
     browser_init.driver.quit()
 
 
+@pytest.fixture(scope='function')
+def make_screen(browser_init, request):
+    fails = request.session.testsfailed
+
+    def screen():
+        if request.session.testsfailed - fails:
+            allure.attach(browser_init.driver.get_screenshot_as_png(), name="Screenshot",
+                          attachment_type=AttachmentType.PNG)
+
+    request.addfinalizer(screen)
+    return make_screen
+
+
 @pytest.fixture(scope='session', autouse=True)
 def prep_db():
     prepare_db()
-    print('===============NNNNNN================')

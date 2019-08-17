@@ -1,6 +1,6 @@
 from base64 import b64decode as decode
 
-TIMEOUT = 30
+TIMEOUT = 10
 WEBDRIVER = 'Chrome'
 URL = 'http://localhost:4200'
 
@@ -30,3 +30,5 @@ EMAIL_SUBJECT_PASSW_RECOVERY = 'Restore password on website RabotyNet'
 USERNAME_PASSW_RECOVERY = 'rabotynet.test.fp@gmail.com'
 OLD_PASSWORD = 'Qdrwbj!23'
 NEW_PASSWORD = 'Qdrwbj1@3'
+
+TOMCAT_PATH = 'C:/SoftServ/soft/apache-tomcat-9.0.10/'

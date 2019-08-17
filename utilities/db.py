@@ -1,5 +1,5 @@
 import psycopg2
-from config import DB_FILE, DB_NAME, DB_USER, DB_PASS, DB_HOST
+from config import DB_FILE, DB_NAME, DB_USER, DB_PASS, DB_HOST, TOMCAT_PATH
 import time
 from config import TIMEOUT
 
@@ -45,3 +45,8 @@ def wait_user_update(user, timeout=TIMEOUT):
             if result == True:
                 return
     raise Exception("No enougth elements")
+
+
+def restart_tomcat():
+    os.popen(TOMCAT_PATH + 'bin/startup.bat')
+    os.popen(TOMCAT_PATH + 'bin/shutdown.bat')
