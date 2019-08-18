@@ -42,7 +42,6 @@ class LocatorsSignIn():
     POP_UP_FORGOT_PASSWORD_TEXT_CHECK = 'Password restored successfully! Please sign in.'
 
 
-
 class LocatorsVacancies(object):
     DETAILS = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
     PAGINATION_NEXT = (By.CSS_SELECTOR, 'button[class="btn btn-info"]')
