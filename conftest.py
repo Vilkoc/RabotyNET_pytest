@@ -9,6 +9,7 @@ from utilities.db import prepare_db
 from utilities.del_from_db import delete_from_vacancy_resume
 from utilities.del_from_db import delete_from_claim
 import allure
+from tests.test_send_resume import test_send_resume
 
 
 @pytest.fixture(scope='function')
@@ -16,8 +17,8 @@ def browser_init():
     driver = WebdriverSelection().get_webdriver(WEBDRIVER)
     driver.maximize_window()
     driver.get(URL)
-
     browser = DriverWrapper(driver, TIMEOUT)
+
     return browser
 
 
@@ -36,10 +37,12 @@ def prep_db():
 
 @pytest.fixture(scope='function')
 def make_screen(browser_init, request):
+    fails = request.session.testsfailed
+
     def screen():
-        try:
-            raise Exception
-        except:
-            allure.attach(browser_init.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
+        if request.session.testsfailed - fails:
+            allure.attach(browser_init.driver.get_screenshot_as_png(), name="Screenshot",
+                          attachment_type=AttachmentType.PNG)
+
     request.addfinalizer(screen)
     return make_screen
