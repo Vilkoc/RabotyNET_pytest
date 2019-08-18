@@ -6,6 +6,7 @@ from locators import LocatorsYourResume
 
 class Header:
     """Header page, which will be inherited by other pages"""
+
     def __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
@@ -42,30 +43,11 @@ class Header:
         values = ('Log in', 'Profile', 'Log out')
         if pick_item not in values:
             raise Exception('Incorrect value for click_dropdown function')
-
-       # if self.check_dropdown():
-        url_0 = self.browser.driver.current_url
-        while True:
+        self.click_icon()
+        if self.check_dropdown():
+            self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        else:
             self.click_icon()
-            print('clicked icon')
-            while True:
-                if self.check_dropdown():
-                    print('dropdown available')
-                    self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
-                    print('clicked', pick_item)
-                    break
-                else:
-                    self.click_icon()
-                    print('Emerge click icon')
-            url_1 = self.browser.driver.current_url
-            if url_0 != url_1:
-                print('URL changed')
-                break
-            else:
-                if pick_item == 'Log out':
-                    if self.browser.get_text_of_element(self.locators.DROPDOWN) == 'Log in':
-                        break
-
 
     def person_verify(self, person):
         """Returns True if the number of elements on the navbar equals to the person_criteria"""
@@ -85,10 +67,8 @@ class Header:
         self.browser.click_element(self.locator_my_companies.MY_COMPANIES)
 
     def get_text_of_first_link(self):
-        # self.browser.wait_element_with_text(self.locators.ICON, '')
-        # self.browser.driver.execute_script('$(document).ready(function(){});')
         self.browser.wait_of_quantity_elements(self.locators.LINKS, 3)
-        print(self.browser.get_elements(self.locators.LINKS)[1].text)
+
         return self.browser.get_elements(self.locators.LINKS)[1].text
 
     def go_to_allVacancies(self):

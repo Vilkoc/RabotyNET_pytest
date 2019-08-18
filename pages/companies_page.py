@@ -12,12 +12,12 @@ class CompaniesPage():
         self.browser.click_element(self.locators.DETAILS_ABOUT_CO)
 
     def view_status_of_co(self):
-        tmp1 = self.browser.get_attr_value(self.locators.STATUS_APPROVED, 'title')
-        return tmp1 == 'This company is approved'
+        company_status = self.browser.get_attr_value(self.locators.STATUS_APPROVED, 'title')
+        return company_status == 'This company is approved'
 
     def view_warning_status_of_co(self):
-        tmp1 = self.browser.get_attr_value(self.locators.STATUS_WARNING, 'title')
-        return tmp1 == 'This company has claims'
+        company_status = self.browser.get_attr_value(self.locators.STATUS_WARNING, 'title')
+        return company_status == 'This company has claims'
 
     def block_co(self):
         self.browser.click_element(self.locators.BLOCK_1_CO)
@@ -32,13 +32,13 @@ class CompaniesPage():
         self.browser.click_element(self.locators.REJECT_CLAIM_BTN)
 
     def confirm_with_popup(self):
-        tmp = self.browser.driver.get_element(self.locators.POPUP)
-        tmp2 = tmp.find_element_by_tag_name('p').text
-        return tmp2
+        popup = self.browser.driver.get_element(self.locators.POPUP)
+        confirm_popup = popup.find_element_by_tag_name('p').text
+        return confirm_popup
 
     def companies_are_visible(self):
-        tmp = self.browser.get_element_with_time_delay(self.locators.TABLE_BODY)
-        if tmp != 0:
+        companies = self.browser.get_element_with_time_delay(self.locators.TABLE_BODY)
+        if companies != 0:
             return True
         else:
             return False
@@ -48,9 +48,9 @@ class CompaniesPage():
         self.browser.click_element(self.locators.SHOW_CLAIMS_BUTTON)
 
     def find_description(self, des):
-        element = self.browser.get_elements(self.locators.DESCRIPTION)
+        elements = self.browser.get_elements(self.locators.DESCRIPTION)
         description = None
-        for i in element:
-            if i.text == des:
-                description = i.text
+        for element in elements:
+            if element.text == des:
+                description = element.text
         return description

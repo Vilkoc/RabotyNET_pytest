@@ -1,4 +1,3 @@
-from config import EXTRA_LONG_PAUSE
 from locators import LocatorsVacancies
 from data_tests import guest_data
 

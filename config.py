@@ -1,11 +1,11 @@
 from base64 import b64decode as decode
 
-TIMEOUT = 10
-WEBDRIVER = 'Chrome'
+TIMEOUT = 30
+WEBDRIVER = 'chrome_inc'
 URL = 'http://localhost:4200'
 
-PAUSE = 1
-EXTRA_LONG_PAUSE = 20
+# PAUSE = 1
+# EXTRA_LONG_PAUSE = 20
 
 EMAIL_SIGNUP = "rabotynet.test@gmail.com"
 FROM_SIGNUP = decode(b'cm9tYV9leHBlcnQ=').decode()

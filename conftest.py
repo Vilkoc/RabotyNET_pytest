@@ -1,6 +1,6 @@
 import pytest
 from application import Application
-from wrapper import DriverWrapper
+from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db, restart_tomcat
@@ -10,10 +10,17 @@ from allure_commons.types import AttachmentType
 from time import sleep
 
 
+@pytest.fixture(scope='session', autouse=True)
+def prep_db(worker_id):
+    if worker_id == 'gw0' or worker_id == 'master':
+        restart_tomcat()
+        prepare_db()
+    sleep(40)
+
+
 @pytest.fixture(scope='function')
 def browser_init():
-    # driver = WebdriverSelection().get_webdriver(WEBDRIVER)
-    driver = WebdriverSelection().get_webdriver('chrome_inc')
+    driver = WebdriverSelection().get_webdriver(WEBDRIVER)
     driver.maximize_window()
     driver.get(URL)
     browser = DriverWrapper(driver, TIMEOUT)
@@ -38,12 +45,3 @@ def make_screen(browser_init, request):
 
     request.addfinalizer(screen)
     return make_screen
-
-
-@pytest.fixture(scope='session', autouse=True)
-def prep_db(worker_id):
-    print('===== worker id====', worker_id)
-    if worker_id == 'gw0' or worker_id == 'master':
-        restart_tomcat()
-        prepare_db()
-    sleep(40)

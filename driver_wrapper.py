@@ -4,6 +4,7 @@ from selenium import webdriver
 from config import TIMEOUT
 import time
 
+
 class DriverWrapper(object):
     """Webdriver wrapper"""
 
@@ -76,18 +77,18 @@ class DriverWrapper(object):
         """This function clicks on company details/update/delete buttons
          according to the company name and specific locators"""
         tbody = self.driver.find_elements(*locator1)
-        for i in tbody:
-            if company_name in i.text:
-                td = i.find_element(*locator2)
+        for element in tbody:
+            if company_name in element.text:
+                td = element.find_element(*locator2)
                 td.click()
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
         data_list = []
         for el in range(len(locator_list)):
-            a = self.driver.find_element_by_id(locator_list[el]).get_attribute(
+            data = self.driver.find_element_by_id(locator_list[el]).get_attribute(
                 locator_attribute)
-            data_list.append(a)
+            data_list.append(data)
         return data_list
 
     def get_text_of_element(self, locator):
@@ -108,11 +109,12 @@ class DriverWrapper(object):
         """Special function for press 'Change' button"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_wait))
         buttons = self.get_elements(locator_buttons)
-        change = None
-        for i in buttons:
-            if i.text == 'Change':
-                change = i
-        change.click()
+        # change = None
+        for button in buttons:
+            if button.text == 'Change':
+                button.click()
+                break
+        # change.click()
 
     def invisibility_of_element(self, locator):
         """This function wait until element will be invisible"""
@@ -159,4 +161,3 @@ class DriverWrapper(object):
                 return
         print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
-
