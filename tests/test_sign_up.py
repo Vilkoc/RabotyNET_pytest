@@ -3,8 +3,7 @@ import allure
 from utilities.func import login
 from utilities.db import change_varification_link, wait_user_update
 
-@allure.feature('Sign up test')
-@allure.story('Sign up test story')
+@allure.feature('Sign up')
 def test_sign_up(app, make_screen):
     """ Testcase for sign up user. """
     page = app
@@ -19,7 +18,7 @@ def test_sign_up(app, make_screen):
     page.sign_in_page.click_sing_up_button()
 
     with allure.step('Is confirmation sent on email?'):
-        assert page.vacancies_page.is_confirmation_sent()
+        assert page.vacancies_page.is_confirmation_sent(), "No confirmation pop up window"
 
     change_varification_link(USERNAME_SIGNUP)
     link = 'http://localhost:4200/users/auth/confirm?token=3e83667c-c59c-4fda-aa7a-a47346a3cd6a'
@@ -29,9 +28,11 @@ def test_sign_up(app, make_screen):
 
     login(page.sign_in_page, USERNAME_SIGNUP, PASSWORD)
     with allure.step('Is user authenticated?'):
-        assert page.header.is_logined()
+        assert page.header.is_logined(), "No 'log out' link"
 
 
+@allure.feature('Sign up')
+@allure.story('Sign up negative')
 def test_sign_up_negative_email(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using email already registered user"""
@@ -50,6 +51,8 @@ def test_sign_up_negative_email(app, make_screen):
         assert page.vacancies_page.is_email_taken()
 
 
+@allure.feature('Sign up')
+@allure.story('Sign up negative')
 def test_sign_up_negative_password(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using incorect password """
@@ -67,6 +70,8 @@ def test_sign_up_negative_password(app, make_screen):
     with allure.step('Is message about wrong password?'):
         assert page.sign_in_page.is_password_sign_up_wrong()
 
+@allure.feature('Sign up')
+@allure.story('Sign up negative')
 def test_sign_up_negative_email_wrong(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using incorect email """
@@ -84,6 +89,8 @@ def test_sign_up_negative_email_wrong(app, make_screen):
     with allure.step('Is message about wrong email?'):
         assert page.sign_in_page.is_email_wrong()
 
+@allure.feature('Sign up')
+@allure.story('Sign up negative')
 def test_sign_up_negative_password_mismatch(app, make_screen):
     """ Testcase for sign up user.
     Negative. Using differen password and matching password """

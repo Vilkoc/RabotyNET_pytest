@@ -9,6 +9,7 @@ from utilities.func import login
 from utilities.db import change_varification_link
 
 
+@allure.feature('Forgot password')
 def test_forgot_password(app, make_screen):
     """ Testcase to renew password using email"""
     page = app
@@ -41,7 +42,8 @@ def test_forgot_password(app, make_screen):
     with allure.step('Is user authenticated?'):
         assert page.header.is_logined()
 
-
+@allure.feature('Forgot password')
+@allure.story('Negative')
 @pytest.mark.skip(reason="just for test skipping")
 def test_forgot_password(app, make_screen):
     """ Testcase to renew password using email"""
