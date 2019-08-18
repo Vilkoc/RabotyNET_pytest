@@ -45,7 +45,7 @@ def test_forgot_password(app, make_screen):
 @allure.feature('Forgot password')
 @allure.story('Negative')
 @pytest.mark.skip(reason="just for test skipping")
-def test_forgot_password(app, make_screen):
+def test_forgot_password_skiped(app, make_screen):
     """ Testcase to renew password using email"""
     page = app
     page.header.click_icon()
