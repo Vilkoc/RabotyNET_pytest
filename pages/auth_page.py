@@ -53,4 +53,3 @@ class AuthPage():
     def is_psswords_mismatch(self):
         text = self.browser.get_text_of_element(self.locators.PASSWORD_MATCHING_SIGN_UP_WRONG)
         return text == "Passwords don`t match!"
-

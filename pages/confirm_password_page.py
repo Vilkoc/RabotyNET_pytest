@@ -16,3 +16,4 @@ class ConfirmPassword:
 
     def click_register_button(self):
         self.browser.click_element(self.locators.REGISTER_BUTTON)
+

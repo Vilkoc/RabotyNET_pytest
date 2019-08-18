@@ -13,3 +13,4 @@ class ForgotPasswordPage:
 
     def click_submit_button(self):
         self.browser.click_element(self.locators.SUBMIT_BUTTON)
+
