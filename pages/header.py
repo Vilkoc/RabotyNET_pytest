@@ -6,8 +6,7 @@ from locators import LocatorsYourResume
 
 class Header:
     """Header page, which will be inherited by other pages"""
-
-    def __init__(self, browser):
+    def  __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
         self.locator_create_company = LocatorsCreateCompanyPage
@@ -68,7 +67,6 @@ class Header:
 
     def get_text_of_first_link(self):
         self.browser.wait_of_quantity_elements(self.locators.LINKS, 3)
-
         return self.browser.get_elements(self.locators.LINKS)[1].text
 
     def go_to_allVacancies(self):

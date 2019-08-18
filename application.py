@@ -1,5 +1,6 @@
 from pages.confirm_password_page import ConfirmPassword
 from pages.forgot_password_page import ForgotPasswordPage
+from pages.company_details_page import CompanyDetailsPage
 from pages.header import Header
 from pages.sign_in_page import SignInPage
 from pages.vacancies_page import VacanciesPage
@@ -33,4 +34,4 @@ class Application():
         self.update_company_page = UpdateCompanyPage(self.browser_init)
         self.create_vacancy_page = CreateVacancyPage(self.browser_init)
         self.create_company_page = CreateCompanyPage(self.browser_init)
-
+        self.company_details_page = CompanyDetailsPage(self.browser_init)

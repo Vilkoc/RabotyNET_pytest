@@ -132,6 +132,7 @@ class LocatorsMyCompaniesPage(object):
 
 
 class LocatorsViewCompany(object):
+    DESCRIPTION_OF_CLAIM = 'description'
     CREATE_VACANCY_BUTTON = (By.CSS_SELECTOR, "a[href='/createVacancy/1']")
     VACANCY_DETAILS_BUTTON = (By.PARTIAL_LINK_TEXT, "View details")
     SIMPLE_VACANCY_DIV = (By.CSS_SELECTOR, "div.simpleVacancy")
