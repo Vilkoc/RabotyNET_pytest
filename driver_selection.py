@@ -9,6 +9,7 @@ class WebdriverSelection():
         if browser_name.lower() == 'chrome_inc':
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument("--incognito")
+            chrome_options.add_argument("headless")
             return webdriver.Chrome(chrome_options=chrome_options)
         elif browser_name.lower() == 'firefox':
             return webdriver.Firefox()
