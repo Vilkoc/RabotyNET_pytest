@@ -1,9 +1,12 @@
 import pytest
+from allure_commons.types import AttachmentType
+
 from application import Application
-from wrapper import DriverWrapper
+from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
+import allure
 
 
 @pytest.fixture(scope='function')
@@ -25,3 +28,16 @@ def app(browser_init):
 @pytest.fixture(scope='session')
 def prep_db():
     prepare_db()
+
+
+@pytest.fixture(scope='function')
+def make_screen(browser_init, request):
+    fails = request.session.testsfailed
+
+    def screen():
+        if request.session.testsfailed - fails:
+            allure.attach(browser_init.driver.get_screenshot_as_png(), name="Screenshot",
+                          attachment_type=AttachmentType.PNG)
+
+    request.addfinalizer(screen)
+    return make_screen

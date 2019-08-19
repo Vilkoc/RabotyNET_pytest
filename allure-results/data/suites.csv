@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Mon Aug 19 16:53:49 EEST 2019","Mon Aug 19 16:54:12 EEST 2019","23567","tests","test_send_resume","","","","test_send_resume",""
+"passed","Mon Aug 19 16:53:30 EEST 2019","Mon Aug 19 16:53:38 EEST 2019","8793","tests","test_send_claim","","","","test_send_claim",""
+"passed","Mon Aug 19 16:53:16 EEST 2019","Mon Aug 19 16:53:21 EEST 2019","4576","tests","test_change_data","","","","test_change_data",""

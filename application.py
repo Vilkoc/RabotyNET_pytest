@@ -1,11 +1,13 @@
 from pages.header import Header
 from pages.sign_in_page import SignInPage
 from pages.vacancies_page import VacanciesPage
+from pages.hot_vacancies_page import HotVacanciesPage
 from pages.view_vacancy_page import ViewVacancyPage
 from pages.preview_resume_page import PreviewResumePage
 from pages.edit_resume_page import EditResumePage
 from pages.view_company_page import ViewCompanyPage
 from pages.companies_page import CompaniesPage
+from pages.search_page import SearchPage
 
 
 class Application():
@@ -21,3 +23,5 @@ class Application():
         self.edit_resume_page = EditResumePage(self.driver_init)
         self.view_company_page = ViewCompanyPage(self.driver_init)
         self.companies_page = CompaniesPage(self.driver_init)
+        self.hot_vacancies_page = HotVacanciesPage(self.driver_init)
+        self.search_page = SearchPage(self.driver_init)
