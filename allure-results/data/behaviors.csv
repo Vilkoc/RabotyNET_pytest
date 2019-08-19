@@ -1,3 +1,6 @@
 "Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
-"","","","0","3","3","0","0"
-"","Delete company","","0","0","1","0","0"
+"","","","0","1","2","0","0"
+"","Creation of the company","","0","0","1","0","0"
+"","Creation of the vacancy","","0","0","1","0","0"
+"","Updating of the company name","","0","1","0","0","0"
+"","Deleting of the company","","0","0","1","0","0"

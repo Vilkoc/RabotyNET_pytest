@@ -1,12 +1,12 @@
 {
-  "uid" : "3cbcb5c1594682c0",
+  "uid" : "34005780183d4c8c",
   "name" : "test_delete_company",
   "fullName" : "tests.test_delete_company#test_delete_company",
   "historyId" : "66b6031066acadea020a78f620f01c3f",
   "time" : {
-    "start" : 1565962988958,
-    "stop" : 1565962991255,
-    "duration" : 2297
+    "start" : 1565962558589,
+    "stop" : 1565962560839,
+    "duration" : 2250
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,95 +14,95 @@
   "beforeStages" : [ {
     "name" : "app",
     "time" : {
-      "start" : 1565962988957,
-      "stop" : 1565962988957,
-      "duration" : 0
+      "start" : 1565962558587,
+      "stop" : 1565962558588,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "browser_init",
     "time" : {
-      "start" : 1565962982642,
-      "stop" : 1565962988957,
-      "duration" : 6315
+      "start" : 1565962552335,
+      "stop" : 1565962558587,
+      "duration" : 6252
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Login",
       "time" : {
-        "start" : 1565962988958,
-        "stop" : 1565962989942,
-        "duration" : 984
+        "start" : 1565962558589,
+        "stop" : 1565962559523,
+        "duration" : 934
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
+      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "All companies",
       "time" : {
-        "start" : 1565962989942,
-        "stop" : 1565962990583,
-        "duration" : 641
+        "start" : 1565962559523,
+        "stop" : 1565962560169,
+        "duration" : 646
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
+      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "81537743c6534a72",
+      "uid" : "e3d744699ed1cbb0",
       "name" : "stdout",
-      "source" : "81537743c6534a72.txt",
+      "source" : "e3d744699ed1cbb0.txt",
       "type" : "text/plain",
       "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 2,
-    "hasContent" : true,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
     "time" : {
-      "start" : 1565962991255,
-      "stop" : 1565962993346,
-      "duration" : 2091
+      "start" : 1565962560839,
+      "stop" : 1565962562924,
+      "duration" : 2085
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "feature",
@@ -120,7 +120,7 @@
     "value" : "DESKTOP-Q2AH420"
   }, {
     "name" : "thread",
-    "value" : "4260-MainThread"
+    "value" : "3092-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -136,22 +136,12 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "8c2fcfe7003b0b3f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1565962558589,
-        "stop" : 1565962560839,
-        "duration" : 2250
-      }
-    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "3cbcb5c1594682c0.json",
+  "source" : "34005780183d4c8c.json",
   "parameterValues" : [ ]
 }

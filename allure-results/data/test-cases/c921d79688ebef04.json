@@ -1,0 +1,232 @@
+{
+  "uid" : "c921d79688ebef04",
+  "name" : "test_create_company",
+  "fullName" : "tests.test_create_company#test_create_company",
+  "historyId" : "e5e14ae71ac788e6fdfd61eabdf7c81f",
+  "time" : {
+    "start" : 1566222012094,
+    "stop" : 1566222016344,
+    "duration" : 4250
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser_init",
+    "time" : {
+      "start" : 1566222005706,
+      "stop" : 1566222012093,
+      "duration" : 6387
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1566222012093,
+      "stop" : 1566222012093,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Login",
+      "time" : {
+        "start" : 1566222012094,
+        "stop" : 1566222012998,
+        "duration" : 904
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click 'Create company' on the header",
+      "time" : {
+        "start" : 1566222012998,
+        "stop" : 1566222013671,
+        "duration" : 673
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter company data",
+      "time" : {
+        "start" : 1566222013671,
+        "stop" : 1566222015269,
+        "duration" : 1598
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Read company data",
+      "time" : {
+        "start" : 1566222015269,
+        "stop" : 1566222016343,
+        "duration" : 1074
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check the result",
+      "time" : {
+        "start" : 1566222016343,
+        "stop" : 1566222016343,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "d9bcbd2ae48ab483",
+      "name" : "stdout",
+      "source" : "d9bcbd2ae48ab483.txt",
+      "type" : "text/plain",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1566222016344,
+      "stop" : 1566222018447,
+      "duration" : 2103
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Creation of the company"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_create_company"
+  }, {
+    "name" : "subSuite"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q2AH420"
+  }, {
+    "name" : "thread",
+    "value" : "10972-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_create_company"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fcca9bc213e07b5a",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None\nMessage: unexpected alert open: {Alert text : Company with that name already exists!}\n  (Session info: chrome=76.0.3809.100)",
+      "time" : {
+        "start" : 1565962963261,
+        "stop" : 1565962966548,
+        "duration" : 3287
+      }
+    }, {
+      "uid" : "1da978223f2e5dac",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None\nMessage: unexpected alert open: {Alert text : Company with that name already exists!}\n  (Session info: chrome=76.0.3809.100)",
+      "time" : {
+        "start" : 1565962533051,
+        "stop" : 1565962536459,
+        "duration" : 3408
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "c3c78891fd1a3c92",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None\nMessage: unexpected alert open: {Alert text : Company with that name already exists!}\n  (Session info: chrome=76.0.3809.100)",
+        "time" : {
+          "start" : 1565962963261,
+          "stop" : 1565962966548,
+          "duration" : 3287
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c921d79688ebef04.json",
+  "parameterValues" : [ ]
+}

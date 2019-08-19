@@ -1,0 +1,214 @@
+{
+  "uid" : "30446f9994df8077",
+  "name" : "test_delete_company",
+  "fullName" : "tests.test_delete_company#test_delete_company",
+  "historyId" : "66b6031066acadea020a78f620f01c3f",
+  "time" : {
+    "start" : 1566222038546,
+    "stop" : 1566222040802,
+    "duration" : 2256
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1566222038546,
+      "stop" : 1566222038546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "browser_init",
+    "time" : {
+      "start" : 1566222032099,
+      "stop" : 1566222038546,
+      "duration" : 6447
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Login",
+      "time" : {
+        "start" : 1566222038546,
+        "stop" : 1566222039501,
+        "duration" : 955
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click the 'All companies' on the header",
+      "time" : {
+        "start" : 1566222039501,
+        "stop" : 1566222040134,
+        "duration" : 633
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Delete the company ",
+      "time" : {
+        "start" : 1566222040134,
+        "stop" : 1566222040771,
+        "duration" : 637
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check the result",
+      "time" : {
+        "start" : 1566222040771,
+        "stop" : 1566222040802,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "d3b6fb433bc2b9aa",
+      "name" : "stdout",
+      "source" : "d3b6fb433bc2b9aa.txt",
+      "type" : "text/plain",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1566222040803,
+      "stop" : 1566222042895,
+      "duration" : 2092
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Deleting of the company"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_delete_company"
+  }, {
+    "name" : "subSuite"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q2AH420"
+  }, {
+    "name" : "thread",
+    "value" : "10972-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_delete_company"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cee4091bdee895ec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962988958,
+        "stop" : 1565962991255,
+        "duration" : 2297
+      }
+    }, {
+      "uid" : "34005780183d4c8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1565962558589,
+        "stop" : 1565962560839,
+        "duration" : 2250
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "3cbcb5c1594682c0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1565962988958,
+          "stop" : 1565962991255,
+          "duration" : 2297
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "30446f9994df8077.json",
+  "parameterValues" : [ ]
+}

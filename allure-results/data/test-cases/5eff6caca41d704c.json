@@ -1,5 +1,5 @@
 {
-  "uid" : "a8d797782faea3ce",
+  "uid" : "5eff6caca41d704c",
   "name" : "test_send_claim",
   "fullName" : "tests.test_send_claim#test_send_claim",
   "historyId" : "7903ef72028fef10228286b47c4b7fd3",
@@ -22,10 +22,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "browser_init",
     "time" : {
@@ -37,26 +37,26 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "bec6e17010c34220",
+      "uid" : "cf7f52021e0bdbeb",
       "name" : "stdout",
-      "source" : "bec6e17010c34220.txt",
+      "source" : "cf7f52021e0bdbeb.txt",
       "type" : "text/plain",
       "size" : 232
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : true,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
@@ -69,10 +69,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "parentSuite",
@@ -103,22 +103,12 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "4603f0e7558df0bb",
-      "status" : "passed",
-      "time" : {
-        "start" : 1565962569265,
-        "stop" : 1565962577307,
-        "duration" : 8042
-      }
-    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "a8d797782faea3ce.json",
+  "source" : "5eff6caca41d704c.json",
   "parameterValues" : [ ]
 }

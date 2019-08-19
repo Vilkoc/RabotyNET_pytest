@@ -1,5 +1,5 @@
 {
-  "uid" : "4a525ec1eef11ec8",
+  "uid" : "55e5a1456b4b8848",
   "name" : "test_send_resume",
   "fullName" : "tests.test_send_resume#test_send_resume",
   "historyId" : "20af8b13da07d3f58854f4bddc5f0640",
@@ -24,10 +24,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "browser_init",
     "time" : {
@@ -39,10 +39,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -50,17 +50,17 @@
     "statusTrace" : "app = <application.Application object at 0x037B6850>\n\n    def test_send_resume(app):\n        app.header.select_option('Log in')\n        app.sign_in_page.login('USER')\n        app.header.go_to_allVacancies()\n        app.vacancies_page.click_viewDetails_button()\n        app.view_vacancy_page.click_sendResume_button()\n        app.preview_resume_page.click_sendEmail_button()\n>       msg = app.preview_resume_page.confirmation_message()\n\ntests\\test_send_resume.py:11: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\npages\\preview_resume_page.py:21: in confirmation_message\n    msg = self.browser.pop_up_element(self.locators.MESSAGE).text\nwrapper.py:120: in pop_up_element\n    WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"fd6442aaed09759c9f73f1d8df9fc454\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x037B69F0>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "70531983bba7d4f2",
+      "uid" : "e0c7625dddc536ff",
       "name" : "stdout",
-      "source" : "70531983bba7d4f2.txt",
+      "source" : "e0c7625dddc536ff.txt",
       "type" : "text/plain",
       "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : true,
+    "shouldDisplayMessage" : true,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : true
+    "stepsCount" : 0,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
@@ -73,10 +73,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "parentSuite",
@@ -107,27 +107,12 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "cef72ae3939143ef",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
-      "time" : {
-        "start" : 1565962585802,
-        "stop" : 1565962619078,
-        "duration" : 33276
-      }
-    } ],
-    "categories" : [ {
-      "name" : "Test defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4a525ec1eef11ec8.json",
+  "source" : "55e5a1456b4b8848.json",
   "parameterValues" : [ ]
 }

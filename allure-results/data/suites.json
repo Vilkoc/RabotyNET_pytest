@@ -8,13 +8,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_change_data",
-          "uid" : "b39abc249d745f82",
+          "uid" : "7c6c4b880d9efd0a",
           "parentUid" : "e5ae3779ff3ab2a37d272668272fc52b",
           "status" : "passed",
           "time" : {
-            "start" : 1565962950569,
-            "stop" : 1565962954747,
-            "duration" : 4178
+            "start" : 1566221999394,
+            "stop" : 1566222003595,
+            "duration" : 4201
           },
           "flaky" : false,
           "newFailed" : false,
@@ -28,13 +28,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_create_company",
-          "uid" : "c3c78891fd1a3c92",
+          "uid" : "c921d79688ebef04",
           "parentUid" : "9862a5762a25f01d6809ecb79013c552",
-          "status" : "broken",
+          "status" : "passed",
           "time" : {
-            "start" : 1565962963261,
-            "stop" : 1565962966548,
-            "duration" : 3287
+            "start" : 1566222012094,
+            "stop" : 1566222016344,
+            "duration" : 4250
           },
           "flaky" : false,
           "newFailed" : false,
@@ -48,13 +48,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_create_vacancy",
-          "uid" : "19b7a6b42e69c146",
+          "uid" : "c9af78262b93010d",
           "parentUid" : "c82acaa4fd8efb1f747f97a8ce8d8879",
           "status" : "passed",
           "time" : {
-            "start" : 1565962975251,
-            "stop" : 1565962980471,
-            "duration" : 5220
+            "start" : 1566222024799,
+            "stop" : 1566222029993,
+            "duration" : 5194
           },
           "flaky" : false,
           "newFailed" : false,
@@ -68,13 +68,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_delete_company",
-          "uid" : "3cbcb5c1594682c0",
+          "uid" : "30446f9994df8077",
           "parentUid" : "bb8f6bf43d54b17153e7ccc7d062bc63",
           "status" : "passed",
           "time" : {
-            "start" : 1565962988958,
-            "stop" : 1565962991255,
-            "duration" : 2297
+            "start" : 1566222038546,
+            "stop" : 1566222040802,
+            "duration" : 2256
           },
           "flaky" : false,
           "newFailed" : false,
@@ -88,13 +88,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_send_claim",
-          "uid" : "a8d797782faea3ce",
+          "uid" : "aecf035085e3d7f8",
           "parentUid" : "92226569621359d45b0f0b508d996d08",
           "status" : "passed",
           "time" : {
-            "start" : 1565962999736,
-            "stop" : 1565963007472,
-            "duration" : 7736
+            "start" : 1566222049217,
+            "stop" : 1566222057006,
+            "duration" : 7789
           },
           "flaky" : false,
           "newFailed" : false,
@@ -108,13 +108,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_send_resume",
-          "uid" : "4a525ec1eef11ec8",
+          "uid" : "927c311a363aad42",
           "parentUid" : "8b52bbdadb2ae8f33dfc3049e193a9a4",
           "status" : "broken",
           "time" : {
-            "start" : 1565963016000,
-            "stop" : 1565963049342,
-            "duration" : 33342
+            "start" : 1566222065460,
+            "stop" : 1566222098814,
+            "duration" : 33354
           },
           "flaky" : false,
           "newFailed" : false,
@@ -128,13 +128,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_update_company_name",
-          "uid" : "28cb4cdddd2cc956",
+          "uid" : "ca8774200eff259f",
           "parentUid" : "6c24d0497977ba0709aa5353dd19c471",
           "status" : "broken",
           "time" : {
-            "start" : 1565963057895,
-            "stop" : 1565963060230,
-            "duration" : 2335
+            "start" : 1566222107333,
+            "stop" : 1566222109640,
+            "duration" : 2307
           },
           "flaky" : false,
           "newFailed" : false,

@@ -1,5 +1,5 @@
 {
-  "uid" : "cef72ae3939143ef",
+  "uid" : "72937d3d24dea32b",
   "name" : "test_send_resume",
   "fullName" : "tests.test_send_resume#test_send_resume",
   "historyId" : "20af8b13da07d3f58854f4bddc5f0640",
@@ -24,10 +24,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "app",
     "time" : {
@@ -39,10 +39,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -50,17 +50,17 @@
     "statusTrace" : "app = <application.Application object at 0x03456110>\n\n    def test_send_resume(app):\n        app.header.select_option('Log in')\n        app.sign_in_page.login('USER')\n        app.header.go_to_allVacancies()\n        app.vacancies_page.click_viewDetails_button()\n        app.view_vacancy_page.click_sendResume_button()\n        app.preview_resume_page.click_sendEmail_button()\n>       msg = app.preview_resume_page.confirmation_message()\n\ntests\\test_send_resume.py:11: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\npages\\preview_resume_page.py:21: in confirmation_message\n    msg = self.browser.pop_up_element(self.locators.MESSAGE).text\nwrapper.py:120: in pop_up_element\n    WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"903033246276808ed09ab2c8800e8c6f\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x03456450>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "9c8e76cfcb1f5e80",
+      "uid" : "5684561989e9c38f",
       "name" : "stdout",
-      "source" : "9c8e76cfcb1f5e80.txt",
+      "source" : "5684561989e9c38f.txt",
       "type" : "text/plain",
       "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : true,
+    "shouldDisplayMessage" : true,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : true
+    "stepsCount" : 0,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
@@ -73,10 +73,10 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "parentSuite",
@@ -113,6 +113,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "cef72ae3939143ef.json",
+  "source" : "72937d3d24dea32b.json",
   "parameterValues" : [ ]
 }

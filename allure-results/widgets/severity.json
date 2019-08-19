@@ -1,70 +1,70 @@
 [ {
-  "uid" : "3cbcb5c1594682c0",
+  "uid" : "30446f9994df8077",
   "name" : "test_delete_company",
   "time" : {
-    "start" : 1565962988958,
-    "stop" : 1565962991255,
-    "duration" : 2297
+    "start" : 1566222038546,
+    "stop" : 1566222040802,
+    "duration" : 2256
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "b39abc249d745f82",
-  "name" : "test_change_data",
-  "time" : {
-    "start" : 1565962950569,
-    "stop" : 1565962954747,
-    "duration" : 4178
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "28cb4cdddd2cc956",
+  "uid" : "ca8774200eff259f",
   "name" : "test_update_company_name",
   "time" : {
-    "start" : 1565963057895,
-    "stop" : 1565963060230,
-    "duration" : 2335
+    "start" : 1566222107333,
+    "stop" : 1566222109640,
+    "duration" : 2307
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "4a525ec1eef11ec8",
-  "name" : "test_send_resume",
+  "uid" : "c9af78262b93010d",
+  "name" : "test_create_vacancy",
   "time" : {
-    "start" : 1565963016000,
-    "stop" : 1565963049342,
-    "duration" : 33342
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "a8d797782faea3ce",
-  "name" : "test_send_claim",
-  "time" : {
-    "start" : 1565962999736,
-    "stop" : 1565963007472,
-    "duration" : 7736
+    "start" : 1566222024799,
+    "stop" : 1566222029993,
+    "duration" : 5194
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c3c78891fd1a3c92",
-  "name" : "test_create_company",
+  "uid" : "7c6c4b880d9efd0a",
+  "name" : "test_change_data",
   "time" : {
-    "start" : 1565962963261,
-    "stop" : 1565962966548,
-    "duration" : 3287
+    "start" : 1566221999394,
+    "stop" : 1566222003595,
+    "duration" : 4201
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "927c311a363aad42",
+  "name" : "test_send_resume",
+  "time" : {
+    "start" : 1566222065460,
+    "stop" : 1566222098814,
+    "duration" : 33354
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "19b7a6b42e69c146",
-  "name" : "test_create_vacancy",
+  "uid" : "c921d79688ebef04",
+  "name" : "test_create_company",
   "time" : {
-    "start" : 1565962975251,
-    "stop" : 1565962980471,
-    "duration" : 5220
+    "start" : 1566222012094,
+    "stop" : 1566222016344,
+    "duration" : 4250
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aecf035085e3d7f8",
+  "name" : "test_send_claim",
+  "time" : {
+    "start" : 1566222049217,
+    "stop" : 1566222057006,
+    "duration" : 7789
   },
   "status" : "passed",
   "severity" : "normal"

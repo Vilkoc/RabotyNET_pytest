@@ -1,12 +1,12 @@
 {
-  "uid" : "b39abc249d745f82",
-  "name" : "test_change_data",
-  "fullName" : "tests.test_change_data#test_change_data",
-  "historyId" : "c493955c1e04bebf091e2c77194ee4aa",
+  "uid" : "1e99c277c59f6081",
+  "name" : "test_create_vacancy",
+  "fullName" : "tests.test_create_vacancy#test_create_vacancy",
+  "historyId" : "1dda964a0919eef33c55af8b3851542e",
   "time" : {
-    "start" : 1565962950569,
-    "stop" : 1565962954747,
-    "duration" : 4178
+    "start" : 1565962545039,
+    "stop" : 1565962550231,
+    "duration" : 5192
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,72 +14,72 @@
   "beforeStages" : [ {
     "name" : "browser_init",
     "time" : {
-      "start" : 1565962944046,
-      "stop" : 1565962950567,
-      "duration" : 6521
+      "start" : 1565962538679,
+      "stop" : 1565962545038,
+      "duration" : 6359
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1565962950567,
-      "stop" : 1565962950567,
-      "duration" : 0
+      "start" : 1565962545038,
+      "stop" : 1565962545039,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "1f3c52ae6a7a041b",
+      "uid" : "e0575b4a485bab98",
       "name" : "stdout",
-      "source" : "1f3c52ae6a7a041b.txt",
+      "source" : "e0575b4a485bab98.txt",
       "type" : "text/plain",
       "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : true,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
     "time" : {
-      "start" : 1565962954747,
-      "stop" : 1565962956825,
-      "duration" : 2078
+      "start" : 1565962550231,
+      "stop" : 1565962552329,
+      "duration" : 2098
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "parentSuite",
     "value" : "tests"
   }, {
     "name" : "suite",
-    "value" : "test_change_data"
+    "value" : "test_create_vacancy"
   }, {
     "name" : "subSuite"
   }, {
@@ -87,7 +87,7 @@
     "value" : "DESKTOP-Q2AH420"
   }, {
     "name" : "thread",
-    "value" : "4260-MainThread"
+    "value" : "3092-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -96,29 +96,19 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "tests.test_change_data"
+    "value" : "tests.test_create_vacancy"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "19fb0c4ba4bb8029",
-      "status" : "passed",
-      "time" : {
-        "start" : 1565962519617,
-        "stop" : 1565962524514,
-        "duration" : 4897
-      }
-    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b39abc249d745f82.json",
+  "source" : "1e99c277c59f6081.json",
   "parameterValues" : [ ]
 }

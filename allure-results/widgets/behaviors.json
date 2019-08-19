@@ -1,8 +1,41 @@
 {
   "total" : 7,
   "items" : [ {
-    "uid" : "fa7387df62df5368e82456c9399b754f",
-    "name" : "Delete company",
+    "uid" : "1516dbc7f06bcdb0ee0dac80bdea4788",
+    "name" : "Updating of the company name",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "f49947e2b12859e70d8a5ebeb00ecdee",
+    "name" : "Creation of the company",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "2749eed485a110f8bb932317ec1949c1",
+    "name" : "Creation of the vacancy",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "8b858009b1cd498445864176918afa70",
+    "name" : "Deleting of the company",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

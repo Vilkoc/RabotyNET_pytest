@@ -3,98 +3,110 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "test_change_data",
-    "uid" : "b39abc249d745f82",
+    "uid" : "7c6c4b880d9efd0a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1565962950569,
-      "stop" : 1565962954747,
-      "duration" : 4178
+      "start" : 1566221999394,
+      "stop" : 1566222003595,
+      "duration" : 4201
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "test_create_company",
-    "uid" : "c3c78891fd1a3c92",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "broken",
-    "time" : {
-      "start" : 1565962963261,
-      "stop" : 1565962966548,
-      "duration" : 3287
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "test_create_vacancy",
-    "uid" : "19b7a6b42e69c146",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1565962975251,
-      "stop" : 1565962980471,
-      "duration" : 5220
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Delete company",
+    "name" : "Creation of the company",
     "children" : [ {
-      "name" : "test_delete_company",
-      "uid" : "3cbcb5c1594682c0",
-      "parentUid" : "fa7387df62df5368e82456c9399b754f",
+      "name" : "test_create_company",
+      "uid" : "c921d79688ebef04",
+      "parentUid" : "f49947e2b12859e70d8a5ebeb00ecdee",
       "status" : "passed",
       "time" : {
-        "start" : 1565962988958,
-        "stop" : 1565962991255,
-        "duration" : 2297
+        "start" : 1566222012094,
+        "stop" : 1566222016344,
+        "duration" : 4250
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "fa7387df62df5368e82456c9399b754f"
+    "uid" : "f49947e2b12859e70d8a5ebeb00ecdee"
+  }, {
+    "name" : "Creation of the vacancy",
+    "children" : [ {
+      "name" : "test_create_vacancy",
+      "uid" : "c9af78262b93010d",
+      "parentUid" : "2749eed485a110f8bb932317ec1949c1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1566222024799,
+        "stop" : 1566222029993,
+        "duration" : 5194
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2749eed485a110f8bb932317ec1949c1"
+  }, {
+    "name" : "Deleting of the company",
+    "children" : [ {
+      "name" : "test_delete_company",
+      "uid" : "30446f9994df8077",
+      "parentUid" : "8b858009b1cd498445864176918afa70",
+      "status" : "passed",
+      "time" : {
+        "start" : 1566222038546,
+        "stop" : 1566222040802,
+        "duration" : 2256
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8b858009b1cd498445864176918afa70"
   }, {
     "name" : "test_send_claim",
-    "uid" : "a8d797782faea3ce",
+    "uid" : "aecf035085e3d7f8",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1565962999736,
-      "stop" : 1565963007472,
-      "duration" : 7736
+      "start" : 1566222049217,
+      "stop" : 1566222057006,
+      "duration" : 7789
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "test_send_resume",
-    "uid" : "4a525ec1eef11ec8",
+    "uid" : "927c311a363aad42",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "broken",
     "time" : {
-      "start" : 1565963016000,
-      "stop" : 1565963049342,
-      "duration" : 33342
+      "start" : 1566222065460,
+      "stop" : 1566222098814,
+      "duration" : 33354
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "test_update_company_name",
-    "uid" : "28cb4cdddd2cc956",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "broken",
-    "time" : {
-      "start" : 1565963057895,
-      "stop" : 1565963060230,
-      "duration" : 2335
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
+    "name" : "Updating of the company name",
+    "children" : [ {
+      "name" : "test_update_company_name",
+      "uid" : "ca8774200eff259f",
+      "parentUid" : "1516dbc7f06bcdb0ee0dac80bdea4788",
+      "status" : "broken",
+      "time" : {
+        "start" : 1566222107333,
+        "stop" : 1566222109640,
+        "duration" : 2307
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1516dbc7f06bcdb0ee0dac80bdea4788"
   } ]
 }

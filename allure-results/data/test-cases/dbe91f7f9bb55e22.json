@@ -1,85 +1,85 @@
 {
-  "uid" : "4603f0e7558df0bb",
-  "name" : "test_send_claim",
-  "fullName" : "tests.test_send_claim#test_send_claim",
-  "historyId" : "7903ef72028fef10228286b47c4b7fd3",
+  "uid" : "dbe91f7f9bb55e22",
+  "name" : "test_change_data",
+  "fullName" : "tests.test_change_data#test_change_data",
+  "historyId" : "c493955c1e04bebf091e2c77194ee4aa",
   "time" : {
-    "start" : 1565962569265,
-    "stop" : 1565962577307,
-    "duration" : 8042
+    "start" : 1565962519617,
+    "stop" : 1565962524514,
+    "duration" : 4897
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "browser_init",
+    "time" : {
+      "start" : 1565962513019,
+      "stop" : 1565962519615,
+      "duration" : 6596
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "app",
     "time" : {
-      "start" : 1565962569264,
-      "stop" : 1565962569264,
+      "start" : 1565962519615,
+      "stop" : 1565962519615,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
-  }, {
-    "name" : "browser_init",
-    "time" : {
-      "start" : 1565962562934,
-      "stop" : 1565962569264,
-      "duration" : 6330
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
     "stepsCount" : 0,
-    "hasContent" : false,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "bbc54e9fdccfb6a2",
+      "uid" : "d61093cb27d7be86",
       "name" : "stdout",
-      "source" : "bbc54e9fdccfb6a2.txt",
+      "source" : "d61093cb27d7be86.txt",
       "type" : "text/plain",
-      "size" : 232
+      "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : true,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "app::0",
     "time" : {
-      "start" : 1565962577308,
-      "stop" : 1565962579398,
-      "duration" : 2090
+      "start" : 1565962524514,
+      "stop" : 1565962526613,
+      "duration" : 2099
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "parentSuite",
     "value" : "tests"
   }, {
     "name" : "suite",
-    "value" : "test_send_claim"
+    "value" : "test_change_data"
   }, {
     "name" : "subSuite"
   }, {
@@ -96,7 +96,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "tests.test_send_claim"
+    "value" : "tests.test_change_data"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -109,6 +109,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4603f0e7558df0bb.json",
+  "source" : "dbe91f7f9bb55e22.json",
   "parameterValues" : [ ]
 }
