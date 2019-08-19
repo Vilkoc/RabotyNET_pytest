@@ -1,7 +1,6 @@
 from data_tests.cowner_data import CownerData
 import allure
 
-
 @allure.feature("Updating of the company name")
 def test_update_company_name(app, make_screen):
     with allure.step("Login"):

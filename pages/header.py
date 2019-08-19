@@ -2,16 +2,22 @@ from locators import LocatorsHeader
 from locators import LocatorsCreateCompanyPage
 from locators import LocatorsMyCompaniesPage
 from locators import LocatorsYourResume
+from config import TIMEOUT
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 
 class Header:
     """Header page, which will be inherited by other pages"""
-    def  __init__(self, browser):
+
+    def __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
         self.locator_create_company = LocatorsCreateCompanyPage
         self.locator_my_companies = LocatorsMyCompaniesPage
         self.locators_your_resume = LocatorsYourResume
+        self.wait = WebDriverWait(browser.driver, TIMEOUT)
 
     def click_icon(self):
         """Clicks on the round icon"""
