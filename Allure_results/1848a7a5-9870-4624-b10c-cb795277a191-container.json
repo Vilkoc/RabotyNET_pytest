@@ -1,1 +1,0 @@
-{"uuid": "bb160505-143a-48de-ab1a-62a65bda4bd5", "children": ["3b6a79b0-92b4-42ae-9f96-03513d3b6247"], "befores": [{"name": "make_screen", "status": "passed", "start": 1566232486464, "stop": 1566232486464}], "afters": [{"name": "make_screen::screen", "status": "passed", "start": 1566232488787, "stop": 1566232488787}], "start": 1566232486464, "stop": 1566232488787}
