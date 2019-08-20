@@ -50,6 +50,7 @@ class LocatorsVacancies(object):
     NEXT_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     PREVIOUS_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     VIEW_DETAILS_BUTTON = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
+    RABOTY_NET = (By.LINK_TEXT, "RabotyNet")
     POP_UP_WINDOW_SIGN_UP_TEXT = (By.CSS_SELECTOR, 'div.wrap > p')
     POP_UP_WINDOW_SIGN_UP_BUTTON = (By.CSS_SELECTOR, 'div.wrap > button')
 

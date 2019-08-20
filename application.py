@@ -4,11 +4,13 @@ from pages.company_details_page import CompanyDetailsPage
 from pages.header import Header
 from pages.sign_in_page import SignInPage
 from pages.vacancies_page import VacanciesPage
+from pages.hot_vacancies_page import HotVacanciesPage
 from pages.view_vacancy_page import ViewVacancyPage
 from pages.preview_resume_page import PreviewResumePage
 from pages.edit_resume_page import EditResumePage
 from pages.view_company_page import ViewCompanyPage
 from pages.companies_page import CompaniesPage
+from pages.search_page import SearchPage
 from pages.my_companies_page import MyCompaniesPage
 from pages.update_company_page import UpdateCompanyPage
 from pages.create_vacancy_page import CreateVacancyPage
@@ -35,3 +37,5 @@ class Application():
         self.create_vacancy_page = CreateVacancyPage(self.browser_init)
         self.create_company_page = CreateCompanyPage(self.browser_init)
         self.company_details_page = CompanyDetailsPage(self.browser_init)
+        self.hot_vacancies_page = HotVacanciesPage(self.browser_init)
+        self.search_page = SearchPage(self.browser_init)

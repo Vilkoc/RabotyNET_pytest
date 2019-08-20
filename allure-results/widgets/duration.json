@@ -1,0 +1,31 @@
+[ {
+  "uid" : "713751c266f87d69",
+  "name" : "test_send_resume",
+  "time" : {
+    "start" : 1566222829104,
+    "stop" : 1566222852671,
+    "duration" : 23567
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e2e7125901a2a439",
+  "name" : "test_send_claim",
+  "time" : {
+    "start" : 1566222810186,
+    "stop" : 1566222818979,
+    "duration" : 8793
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1aefdcf2748a4a3a",
+  "name" : "test_change_data",
+  "time" : {
+    "start" : 1566222796612,
+    "stop" : 1566222801188,
+    "duration" : 4576
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
