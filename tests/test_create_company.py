@@ -1,9 +1,12 @@
-from data_tests.cowner_data import CownerData
+''''''
 import allure
-import time
+from data_tests.cowner_data import CownerData
+
 
 @allure.feature("Creation of the company")
 def test_create_company(app, make_screen):
+    '''Creation of the company'''
+
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)
         app.sign_in_page.login(CownerData.PERSON)
@@ -21,4 +24,3 @@ def test_create_company(app, make_screen):
         for data in CownerData.COMPANY_DATA:
             assert data == company_data[num_of_data]
             num_of_data += 1
-

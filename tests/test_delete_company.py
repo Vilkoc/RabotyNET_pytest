@@ -1,5 +1,5 @@
-from data_tests.cowner_data import CownerData
 import allure
+from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Deleting of the company")
