@@ -1,0 +1,32 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_search","","","","test_1search_button",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_login_Stas","","","","test_login_logout[cowner@gmail.com-cowner-My companies]"," Testcase for user login.
+        Try to login for each user"
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_send_claim","","","","test_send_claim",""
+"broken","Tue Aug 20 18:31:03 EEST 2019","Tue Aug 20 18:31:03 EEST 2019","0","tests","test_sign_up","","","","test_sign_up_negative_email"," Testcase for sign up user.
+    Negative. Using email already registered user"
+"passed","Tue Aug 20 18:41:50 EEST 2019","Tue Aug 20 18:41:53 EEST 2019","3291","tests","test_delete_company","","","","test_delete_company",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_hotVacancies","","","","test_hot_vacancies",""
+"broken","Tue Aug 20 18:31:01 EEST 2019","Tue Aug 20 18:31:01 EEST 2019","0","tests","test_admin_check_status_co","","","","test_admin_check_status_co",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_change_data","","","","test_change_data",""
+"broken","Tue Aug 20 18:31:03 EEST 2019","Tue Aug 20 18:31:03 EEST 2019","0","tests","test_sign_up","","","","test_sign_up_negative_password_mismatch"," Testcase for sign up user.
+    Negative. Using differen password and matching password "
+"skipped","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_forgot_password","","","","test_forgot_password_skiped"," Testcase to renew password using email"
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_admin_companies_presence","","","","test_admin_companies_presence",""
+"passed","Tue Aug 20 18:41:12 EEST 2019","Tue Aug 20 18:41:19 EEST 2019","7454","tests","test_create_company","","","","test_create_company","Creation of the company"
+"broken","Tue Aug 20 18:31:03 EEST 2019","Tue Aug 20 18:31:03 EEST 2019","0","tests","test_sign_up","","","","test_sign_up_negative_email_wrong"," Testcase for sign up user.
+    Negative. Using incorect email "
+"skipped","Tue Aug 20 18:31:01 EEST 2019","Tue Aug 20 18:31:01 EEST 2019","0","tests","test_admin_block_co","","","","test_block_co",""
+"broken","Tue Aug 20 18:31:03 EEST 2019","Tue Aug 20 18:31:03 EEST 2019","0","tests","test_sign_up","","","","test_sign_up_negative_password"," Testcase for sign up user.
+    Negative. Using incorect password "
+"passed","Tue Aug 20 18:42:05 EEST 2019","Tue Aug 20 18:42:10 EEST 2019","5026","tests","test_update_company_name","","","","test_update_company_name",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_sign_up","","","","test_sign_up"," Testcase for sign up user. "
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_send_admin_create_claim","","","","test_admin_create_claim",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_send_resume","","","","test_send_resume",""
+"passed","Tue Aug 20 18:41:31 EEST 2019","Tue Aug 20 18:41:39 EEST 2019","7611","tests","test_create_vacancy","","","","test_create_vacancy",""
+"broken","Tue Aug 20 18:31:03 EEST 2019","Tue Aug 20 18:31:03 EEST 2019","0","tests","test_vacancies","","","","test_vacancies",""
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_forgot_password","","","","test_forgot_password"," Testcase to renew password using email"
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_login_Stas","","","","test_login_logout[admin@gmail.com-admin-Сompanies]"," Testcase for user login.
+        Try to login for each user"
+"broken","Tue Aug 20 18:31:02 EEST 2019","Tue Aug 20 18:31:02 EEST 2019","0","tests","test_login_Stas","","","","test_login_logout[user@gmail.com-user-Create company1]"," Testcase for user login.
+        Try to login for each user"
