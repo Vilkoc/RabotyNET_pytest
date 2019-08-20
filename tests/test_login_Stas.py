@@ -1,5 +1,4 @@
 import pytest
-
 import allure
 
 @allure.feature('Sign In')
