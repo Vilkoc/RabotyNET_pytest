@@ -33,6 +33,13 @@ class VacanciesPage:
 
     def view_details(self):
         self.browser.click_element(self.locators.DETAILS)
+        self.browser.click_element(self.locators.RABOTY_NET)
+
+    def click_pagination_next(self):
+        self.browser.click_element_by_text(self.locators.PAGINATION_NEXT, guest_data.NEXT)
+
+    def click_pagination_previous(self):
+        self.browser.click_element_by_text(self.locators.PAGINATION_PREVIOUS, guest_data.PREVIOUS)
 
     def check_pagination_next(self):
         self.browser.click_element_by_text(self.locators.PAGINATION_NEXT, guest_data.NEXT)
@@ -44,10 +51,10 @@ class VacanciesPage:
         tmp = self.browser.pop_up_element(self.locators.VACANCY_INFO).text
         return tmp
 
-    def next_test(self):
+    def next_click_test(self):
         tmp2 = self.browser.pop_up_element(self.locators.NEXT_TEST).text
         return tmp2
 
-    def previous_test(self):
+    def previous_click_test(self):
         tmp3 = self.browser.pop_up_element(self.locators.PREVIOUS_TEST).text
         return tmp3
