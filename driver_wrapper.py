@@ -81,6 +81,7 @@ class DriverWrapper(object):
             if company_name in element.text:
                 td = element.find_element(*locator2)
                 td.click()
+                break
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
@@ -161,3 +162,4 @@ class DriverWrapper(object):
                 return
         print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
+

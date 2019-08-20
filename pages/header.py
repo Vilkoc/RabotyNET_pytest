@@ -2,10 +2,6 @@ from locators import LocatorsHeader
 from locators import LocatorsCreateCompanyPage
 from locators import LocatorsMyCompaniesPage
 from locators import LocatorsYourResume
-from config import TIMEOUT
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 
 class Header:
@@ -17,7 +13,6 @@ class Header:
         self.locator_create_company = LocatorsCreateCompanyPage
         self.locator_my_companies = LocatorsMyCompaniesPage
         self.locators_your_resume = LocatorsYourResume
-        self.wait = WebDriverWait(browser.driver, TIMEOUT)
 
     def click_icon(self):
         """Clicks on the round icon"""

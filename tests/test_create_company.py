@@ -1,6 +1,6 @@
 from data_tests.cowner_data import CownerData
 import allure
-
+import time
 
 @allure.feature("Creation of the company")
 def test_create_company(app, make_screen):
@@ -13,7 +13,7 @@ def test_create_company(app, make_screen):
         app.create_company_page.enter_data(CownerData.COMPANY_DATA)
         app.create_company_page.click_create_button()
     with allure.step("Read company data"):
-        app.header.click_my_companies()
+        app.create_company_page.click_my_companies_tab()
         app.my_companies_page.click_update(CownerData.COMPANY_CREATE)
         company_data = app.create_company_page.read_data()
     with allure.step("Check the result"):
@@ -21,3 +21,4 @@ def test_create_company(app, make_screen):
         for data in CownerData.COMPANY_DATA:
             assert data == company_data[num_of_data]
             num_of_data += 1
+
