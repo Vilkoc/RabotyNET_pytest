@@ -23,4 +23,4 @@ def test_vacancies(app, make_screen):
 
     with allure.step('Check assertion of button "previous"'):
         text3 = app.vacancies_page.previous_click_test()
-        assert text3 == guest_data.TOP_VACANCY
+        assert text3 == guest_data.VAC_NAME

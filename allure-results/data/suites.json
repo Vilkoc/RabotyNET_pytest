@@ -8,12 +8,12 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_block_co",
-          "uid" : "951bcf97abe31df5",
+          "uid" : "6e712074fc06b20e",
           "parentUid" : "54d2da26e288e83d10ed9c3819dbdce2",
           "status" : "skipped",
           "time" : {
-            "start" : 1566316469408,
-            "stop" : 1566316469408,
+            "start" : 1566318202888,
+            "stop" : 1566318202888,
             "duration" : 0
           },
           "flaky" : false,
@@ -28,13 +28,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_admin_check_status_co",
-          "uid" : "9d0cabd409283d8c",
+          "uid" : "f0f7f532871dcdc6",
           "parentUid" : "9e7d08873e1e6dc49b7de24183d68c01",
           "status" : "passed",
           "time" : {
-            "start" : 1566316521118,
-            "stop" : 1566316538915,
-            "duration" : 17797
+            "start" : 1566318250402,
+            "stop" : 1566318251789,
+            "duration" : 1387
           },
           "flaky" : false,
           "newFailed" : false,
@@ -48,13 +48,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_admin_companies_presence",
-          "uid" : "e6b5119868a5748d",
+          "uid" : "7c0b751dcee9b294",
           "parentUid" : "65792adbb11874b6c7ea3fdb52cb2b98",
           "status" : "passed",
           "time" : {
-            "start" : 1566316551461,
-            "stop" : 1566316554260,
-            "duration" : 2799
+            "start" : 1566318280122,
+            "stop" : 1566318281581,
+            "duration" : 1459
           },
           "flaky" : false,
           "newFailed" : false,
@@ -68,13 +68,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_create_company",
-          "uid" : "c063b3d98aa607d6",
+          "uid" : "1ffb6537a9bb11ad",
           "parentUid" : "9862a5762a25f01d6809ecb79013c552",
           "status" : "passed",
           "time" : {
-            "start" : 1566316565723,
-            "stop" : 1566316573435,
-            "duration" : 7712
+            "start" : 1566318289979,
+            "stop" : 1566318294918,
+            "duration" : 4939
           },
           "flaky" : false,
           "newFailed" : false,
@@ -84,96 +84,17 @@
       } ],
       "uid" : "427e6d8735fa91249f1e8595cc1460f2"
     }, {
-      "name" : "test_forgot_password",
-      "children" : [ {
-        "children" : [ {
-          "name" : "test_forgot_password_skiped",
-          "uid" : "6e8f76165539e85a",
-          "parentUid" : "c357f56ec7212a6d39add07b3a9e0bbc",
-          "status" : "skipped",
-          "time" : {
-            "start" : 1566316575598,
-            "stop" : 1566316575598,
-            "duration" : 0
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "test_forgot_password",
-          "uid" : "f8c87cf86b48cc20",
-          "parentUid" : "c357f56ec7212a6d39add07b3a9e0bbc",
-          "status" : "passed",
-          "time" : {
-            "start" : 1566316647668,
-            "stop" : 1566316659159,
-            "duration" : 11491
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "c357f56ec7212a6d39add07b3a9e0bbc"
-      } ],
-      "uid" : "3ef0f9695f6ddb43eac21869b4a67057"
-    }, {
-      "name" : "test_login_Stas",
-      "children" : [ {
-        "children" : [ {
-          "name" : "test_login_logout[admin@gmail.com-admin-Сompanies]",
-          "uid" : "99d8f924191df475",
-          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
-          "status" : "passed",
-          "time" : {
-            "start" : 1566316585917,
-            "stop" : 1566316594525,
-            "duration" : 8608
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "'Сompanies'", "'admin'", "'admin@gmail.com'" ]
-        }, {
-          "name" : "test_login_logout[user@gmail.com-user-Create company1]",
-          "uid" : "ad4dc84726cdd895",
-          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
-          "status" : "failed",
-          "time" : {
-            "start" : 1566316607090,
-            "stop" : 1566316609237,
-            "duration" : 2147
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "'Create company1'", "'user'", "'user@gmail.com'" ]
-        }, {
-          "name" : "test_login_logout[cowner@gmail.com-cowner-My companies]",
-          "uid" : "b5d64341bce31130",
-          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
-          "status" : "passed",
-          "time" : {
-            "start" : 1566316621985,
-            "stop" : 1566316629686,
-            "duration" : 7701
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "'My companies'", "'cowner'", "'cowner@gmail.com'" ]
-        } ],
-        "uid" : "b3caf092c05c770885b0ec2df4b2a693"
-      } ],
-      "uid" : "60cf71fbf9bc835a64ff494f69abcd7a"
-    }, {
       "name" : "test_change_data",
       "children" : [ {
         "children" : [ {
           "name" : "test_change_data",
-          "uid" : "9557f0b360fb1269",
+          "uid" : "97d6e09350327152",
           "parentUid" : "e5ae3779ff3ab2a37d272668272fc52b",
           "status" : "passed",
           "time" : {
-            "start" : 1566316591892,
-            "stop" : 1566316598794,
-            "duration" : 6902
+            "start" : 1566318300450,
+            "stop" : 1566318304961,
+            "duration" : 4511
           },
           "flaky" : false,
           "newFailed" : false,
@@ -183,37 +104,17 @@
       } ],
       "uid" : "71b12aaa5c2c64f40ff8ff72f0b55756"
     }, {
-      "name" : "test_create_vacancy",
-      "children" : [ {
-        "children" : [ {
-          "name" : "test_create_vacancy",
-          "uid" : "6db48ff2ce1ea4a7",
-          "parentUid" : "c82acaa4fd8efb1f747f97a8ce8d8879",
-          "status" : "passed",
-          "time" : {
-            "start" : 1566316610926,
-            "stop" : 1566316618461,
-            "duration" : 7535
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "c82acaa4fd8efb1f747f97a8ce8d8879"
-      } ],
-      "uid" : "8416d698808fd97516fcf6b76031ae9b"
-    }, {
       "name" : "test_delete_company",
       "children" : [ {
         "children" : [ {
           "name" : "test_delete_company",
-          "uid" : "7dfde702debd51df",
+          "uid" : "c31da2375abcd178",
           "parentUid" : "bb8f6bf43d54b17153e7ccc7d062bc63",
           "status" : "passed",
           "time" : {
-            "start" : 1566316630996,
-            "stop" : 1566316634457,
-            "duration" : 3461
+            "start" : 1566318303864,
+            "stop" : 1566318306197,
+            "duration" : 2333
           },
           "flaky" : false,
           "newFailed" : false,
@@ -223,17 +124,156 @@
       } ],
       "uid" : "7b7a9f74b54310d803864d85273c2a7f"
     }, {
+      "name" : "test_create_vacancy",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_create_vacancy",
+          "uid" : "81b3d6517a289708",
+          "parentUid" : "c82acaa4fd8efb1f747f97a8ce8d8879",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318313690,
+            "stop" : 1566318319165,
+            "duration" : 5475
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c82acaa4fd8efb1f747f97a8ce8d8879"
+      } ],
+      "uid" : "8416d698808fd97516fcf6b76031ae9b"
+    }, {
+      "name" : "test_forgot_password",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_forgot_password",
+          "uid" : "a74bd62dca389797",
+          "parentUid" : "c357f56ec7212a6d39add07b3a9e0bbc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318316981,
+            "stop" : 1566318324257,
+            "duration" : 7276
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_forgot_password_skiped",
+          "uid" : "a9ab170815d898f3",
+          "parentUid" : "c357f56ec7212a6d39add07b3a9e0bbc",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1566318326332,
+            "stop" : 1566318326332,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c357f56ec7212a6d39add07b3a9e0bbc"
+      } ],
+      "uid" : "3ef0f9695f6ddb43eac21869b4a67057"
+    }, {
+      "name" : "test_hotVacancies",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_hot_vacancies",
+          "uid" : "4318430c689dd080",
+          "parentUid" : "d8f9f3c934de8f4c145ec89cd231490c",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318328103,
+            "stop" : 1566318329598,
+            "duration" : 1495
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d8f9f3c934de8f4c145ec89cd231490c"
+      } ],
+      "uid" : "6a47d369639fde059039a39d63c3d7a7"
+    }, {
+      "name" : "test_login_Stas",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_login_logout[user@gmail.com-user-Create company1]",
+          "uid" : "9f6e52a4071c6a02",
+          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
+          "status" : "failed",
+          "time" : {
+            "start" : 1566318332770,
+            "stop" : 1566318334133,
+            "duration" : 1363
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'Create company1'", "'user'", "'user@gmail.com'" ]
+        }, {
+          "name" : "test_login_logout[admin@gmail.com-admin-Сompanies]",
+          "uid" : "db00c0507f34cb7e",
+          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318338264,
+            "stop" : 1566318342951,
+            "duration" : 4687
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'Сompanies'", "'admin'", "'admin@gmail.com'" ]
+        }, {
+          "name" : "test_login_logout[cowner@gmail.com-cowner-My companies]",
+          "uid" : "24da13e13bdc5669",
+          "parentUid" : "b3caf092c05c770885b0ec2df4b2a693",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318344162,
+            "stop" : 1566318348209,
+            "duration" : 4047
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'My companies'", "'cowner'", "'cowner@gmail.com'" ]
+        } ],
+        "uid" : "b3caf092c05c770885b0ec2df4b2a693"
+      } ],
+      "uid" : "60cf71fbf9bc835a64ff494f69abcd7a"
+    }, {
+      "name" : "test_search",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_1search_button",
+          "uid" : "2173f2ea33a4124c",
+          "parentUid" : "2f10e856568fd6e4c4b14ec97529f4a4",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318351525,
+            "stop" : 1566318352979,
+            "duration" : 1454
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2f10e856568fd6e4c4b14ec97529f4a4"
+      } ],
+      "uid" : "6962efaacb396e2fd73c5ab69c5f4008"
+    }, {
       "name" : "test_send_admin_create_claim",
       "children" : [ {
         "children" : [ {
           "name" : "test_admin_create_claim",
-          "uid" : "a096bb063de67b1",
+          "uid" : "d26d0b824ba993f8",
           "parentUid" : "741c19d06317b203c544901c86b41e48",
           "status" : "passed",
           "time" : {
-            "start" : 1566316642472,
-            "stop" : 1566316647755,
-            "duration" : 5283
+            "start" : 1566318356948,
+            "stop" : 1566318360328,
+            "duration" : 3380
           },
           "flaky" : false,
           "newFailed" : false,
@@ -247,13 +287,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_send_claim",
-          "uid" : "78e5c69a418a567c",
+          "uid" : "3df4d8e73b26e01d",
           "parentUid" : "92226569621359d45b0f0b508d996d08",
           "status" : "passed",
           "time" : {
-            "start" : 1566316660203,
-            "stop" : 1566316675046,
-            "duration" : 14843
+            "start" : 1566318362266,
+            "stop" : 1566318371146,
+            "duration" : 8880
           },
           "flaky" : false,
           "newFailed" : false,
@@ -267,13 +307,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_send_resume",
-          "uid" : "18d6c5a6e74ce352",
+          "uid" : "e02b7cd5980a5bb7",
           "parentUid" : "8b52bbdadb2ae8f33dfc3049e193a9a4",
           "status" : "broken",
           "time" : {
-            "start" : 1566316672209,
-            "stop" : 1566316707248,
-            "duration" : 35039
+            "start" : 1566318369824,
+            "stop" : 1566318403211,
+            "duration" : 33387
           },
           "flaky" : false,
           "newFailed" : false,
@@ -287,65 +327,65 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_sign_up",
-          "uid" : "9a81dc99571da9f9",
+          "uid" : "ede43d0febb6042f",
           "parentUid" : "f857b33867a566615737b4190fee92a4",
           "status" : "passed",
           "time" : {
-            "start" : 1566316686524,
-            "stop" : 1566316699142,
-            "duration" : 12618
+            "start" : 1566318379501,
+            "stop" : 1566318386444,
+            "duration" : 6943
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "test_sign_up_negative_password",
-          "uid" : "6a8edf55843d8ce8",
+          "uid" : "76004e8599596f57",
           "parentUid" : "f857b33867a566615737b4190fee92a4",
           "status" : "passed",
           "time" : {
-            "start" : 1566316710998,
-            "stop" : 1566316713574,
-            "duration" : 2576
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "test_sign_up_negative_email",
-          "uid" : "ac493a9937fe17f5",
-          "parentUid" : "f857b33867a566615737b4190fee92a4",
-          "status" : "passed",
-          "time" : {
-            "start" : 1566316720895,
-            "stop" : 1566316724039,
-            "duration" : 3144
+            "start" : 1566318394816,
+            "stop" : 1566318395901,
+            "duration" : 1085
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "test_sign_up_negative_email_wrong",
-          "uid" : "ad3020df23716bff",
+          "uid" : "92cc40edd994eff4",
           "parentUid" : "f857b33867a566615737b4190fee92a4",
           "status" : "passed",
           "time" : {
-            "start" : 1566316726607,
-            "stop" : 1566316729075,
-            "duration" : 2468
+            "start" : 1566318404424,
+            "stop" : 1566318405548,
+            "duration" : 1124
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_sign_up_negative_email",
+          "uid" : "39992afeb8cd876b",
+          "parentUid" : "f857b33867a566615737b4190fee92a4",
+          "status" : "passed",
+          "time" : {
+            "start" : 1566318412068,
+            "stop" : 1566318413868,
+            "duration" : 1800
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "test_sign_up_negative_password_mismatch",
-          "uid" : "c67ba717320d8150",
+          "uid" : "d33e0343c319b16d",
           "parentUid" : "f857b33867a566615737b4190fee92a4",
           "status" : "passed",
           "time" : {
-            "start" : 1566316736905,
-            "stop" : 1566316739317,
-            "duration" : 2412
+            "start" : 1566318414458,
+            "stop" : 1566318415655,
+            "duration" : 1197
           },
           "flaky" : false,
           "newFailed" : false,
@@ -359,13 +399,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_update_company_name",
-          "uid" : "d8a1ae4009ced905",
+          "uid" : "382de835b5e69d6a",
           "parentUid" : "6c24d0497977ba0709aa5353dd19c471",
           "status" : "passed",
           "time" : {
-            "start" : 1566316741682,
-            "stop" : 1566316746706,
-            "duration" : 5024
+            "start" : 1566318422476,
+            "stop" : 1566318426420,
+            "duration" : 3944
           },
           "flaky" : false,
           "newFailed" : false,
@@ -374,6 +414,26 @@
         "uid" : "6c24d0497977ba0709aa5353dd19c471"
       } ],
       "uid" : "8ac9d4ea2177154337268a0348f08205"
+    }, {
+      "name" : "test_vacancies",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_vacancies",
+          "uid" : "f40bc1946ba2baa3",
+          "parentUid" : "5d3e84947eb664f81b8ddc48ecfb18c0",
+          "status" : "failed",
+          "time" : {
+            "start" : 1566318424811,
+            "stop" : 1566318425929,
+            "duration" : 1118
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "5d3e84947eb664f81b8ddc48ecfb18c0"
+      } ],
+      "uid" : "744c3f3d02a4c6dbb593bb53df1827c4"
     } ],
     "uid" : "e387fa4bb326b54ea8c19c2822aba374"
   } ]

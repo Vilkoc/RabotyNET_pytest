@@ -1,5 +1,5 @@
 {
-  "total" : 14,
+  "total" : 17,
   "items" : [ {
     "uid" : "e8cdc50ea32ffa02631bb6c0c71244b4",
     "name" : "Sign In",
@@ -10,6 +10,17 @@
       "passed" : 2,
       "unknown" : 0,
       "total" : 3
+    }
+  }, {
+    "uid" : "919f60e4e4faf119cf56b1497fee7442",
+    "name" : "Vacancies page",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
     }
   }, {
     "uid" : "63e3e90b7d7390ac3abca1bfe66d6a93",
@@ -67,17 +78,6 @@
       "total" : 1
     }
   }, {
-    "uid" : "2749eed485a110f8bb932317ec1949c1",
-    "name" : "Creation of the vacancy",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
     "uid" : "8b858009b1cd498445864176918afa70",
     "name" : "Deleting of the company",
     "statistic" : {
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "ef3d4494d4f1798ee53d89fca7eb7220",
-    "name" : "Sending claim",
+    "uid" : "2749eed485a110f8bb932317ec1949c1",
+    "name" : "Creation of the vacancy",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -100,8 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "1516dbc7f06bcdb0ee0dac80bdea4788",
-    "name" : "Updating of the company name",
+    "uid" : "5fcc43e1a6760ea58f76860441099e5d",
+    "name" : "HotVacancies page",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
