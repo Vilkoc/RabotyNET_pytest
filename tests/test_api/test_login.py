@@ -19,17 +19,17 @@ def test_login(user, password, expected):
     assert data['authorities'][0]['authority'] == expected, "Wrong user role"
     session.get('http://localhost:8080/RabotyNET/logout')
 
-def test_sign_up():
-    session = requests.Session()
-    data = {
-      "login": USERNAME_SIGNUP,
-      "matchingPassword": PASSWORD,
-      "password": PASSWORD
-    }
-    response = session.post('http://localhost:8080/RabotyNET/users/auth', data)
-    assert response.status_code == 200, "Wrong status code"
-    data = response.json()
-    assert data['username'] == user, "Wrong username"
-    assert data['authorities'][0]['authority'] == expected, "Wrong user role"
-    session.get('http://localhost:8080/RabotyNET/logout')
+# def test_sign_up():
+#     session = requests.Session()
+#     data = {
+#       "login": USERNAME_SIGNUP,
+#       "matchingPassword": PASSWORD,
+#       "password": PASSWORD
+#     }
+#     response = session.post('http://localhost:8080/RabotyNET/users/auth', data)
+#     assert response.status_code == 200, "Wrong status code"
+#     data = response.json()
+#     assert data['username'] == user, "Wrong username"
+#     assert data['authorities'][0]['authority'] == expected, "Wrong user role"
+#     session.get('http://localhost:8080/RabotyNET/logout')
 

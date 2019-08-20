@@ -16,9 +16,10 @@ def generAllure(c):
 
 @task
 def restart_tomcat(c):
-    run(TOMCAT_PATH + "shutdown.bat")
+    c.cd(TOMCAT_PATH)
+    c.run("shutdown.bat")
     sleep(TIMEOUT)
-    run(TOMCAT_PATH + "startup.bat")
+    c.run("startup.bat")
     sleep(40)
 
 @task
@@ -26,8 +27,14 @@ def run_pytest_with_allure(c):
     run('pytest -rA --alluredir report')
 
 @task
-def run_tests(c):
-    restart_tomcat()
-    run_pytest_with_allure
+def runTests(c):
+    restart_tomcat(c)
+    run_pytest_with_allure(c)
+    generAllure(c)
+
+@task
+def r(c):
+    print(dir(c))
+    print(dir(c.run))
 
 

@@ -1,11 +1,10 @@
-from conftest import app, prep_db
-from utilities.db import prepare_db
+import allure
 
 
-# def test_admin_check_status_co(app, prep_db):
+@allure.story('Admin features')
 def test_admin_check_status_co(app, make_screen):
-    # prepare_db()
-    app.header.select_option('Log in')
-    app.sign_in_page.login('ADMIN')
-
-    assert app.companies_page.view_status_of_co()
+    with allure.step('Log in'):
+        app.header.select_option('Log in')
+        app.sign_in_page.login('ADMIN')
+    with allure.step('Find status of company'):
+        assert app.companies_page.view_status_of_co()
