@@ -29,7 +29,7 @@ def app(browser_init):
     browser_init.driver.quit()
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session', autouse='True')
 def prep_db():
     delete_from_vacancy_resume()
     delete_from_claim()

@@ -1,9 +1,11 @@
-from invoke import task, run
+from invoke import task
+
 
 @task
-def build(c):
-    run("nosetests --detailed-errors")
+def generAllure(c):
+    c.run("allure serve C:/Users/Nazar/Desktop/RabotyNET_pytest/report")
+
 
 @task
-def dell_allure(c):
-    run("Remove-Item 'C:\Users\Nazar\Desktop\RabotyNET_pytest'")
+def pylint(c):
+    c.run("pylint tests")
