@@ -13,21 +13,21 @@ class HotVacanciesPage():
         self.browser.click_element(self.locators.HOT_DETAILS)
         self.browser.click_element(self.locators.HOT_VACANCY_PAGE)
 
-    def check_pagination_next(self):
+    def click_pagination_next(self):
         self.browser.click_element(self.locators.HOT_VACANCY_PAGE)
         self.browser.click_element_by_text(self.locators.HOT_PAGINATION_NEXT, guest_data.HOT_NEXT)
 
-    def check_pagination_previous(self):
+    def click_pagination_previous(self):
         self.browser.click_element_by_text(self.locators.HOT_PAGINATION_PREVIOUS, guest_data.HOT_PREVIOUS)
 
     def details_text(self):
         tmp = self.browser.pop_up_element(self.locators.HOT_VACANCY_INFO).text
         return tmp
 
-    def next_test(self):
+    def next_click_test(self):
         tmp2 = self.browser.pop_up_element(self.locators.HOT_NEXT_TEST).text
         return tmp2
 
-    def previous_test(self):
+    def previous_click_test(self):
         tmp3 = self.browser.pop_up_element(self.locators.HOT_PREVIOUS_TEST).text
         return tmp3

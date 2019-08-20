@@ -12,15 +12,15 @@ def test_hot_vacancies(app, make_screen):
         assert text1 == guest_data.TOP_VACANCY
 
     with allure.step('Click button "next"'):
-        app.hot_vacancies_page.check_pagination_next()
+        app.hot_vacancies_page.click_pagination_next()
 
     with allure.step('Check assertion of button "next"'):
-        text2 = app.hot_vacancies_page.next_test()
+        text2 = app.hot_vacancies_page.next_click_test()
         assert text2 == guest_data.TOP_VACANCY
 
     with allure.step('Click button "previous"'):
-        app.hot_vacancies_page.check_pagination_previous()
+        app.hot_vacancies_page.click_pagination_previous()
 
     with allure.step('Check assertion of button "previous"'):
-        text3 = app.hot_vacancies_page.previous_test()
+        text3 = app.hot_vacancies_page.previous_click_test()
         assert text3 == guest_data.TOP_VACANCY
