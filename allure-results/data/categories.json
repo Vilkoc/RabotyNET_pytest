@@ -2,24 +2,45 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Wrong link text\nassert 'Create company' == 'Create company1'\n  - Create company\n  + Create company1\n  ?               +",
+      "children" : [ {
+        "name" : "test_login_logout[user@gmail.com-user-Create company1]",
+        "uid" : "ad4dc84726cdd895",
+        "parentUid" : "bbcd882c6984bf93caa7f9b70114d48d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1566316607090,
+          "stop" : 1566316609237,
+          "duration" : 2147
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'Create company1'", "'user'", "'user@gmail.com'" ]
+      } ],
+      "uid" : "bbcd882c6984bf93caa7f9b70114d48d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.WebDriverException: Message: chrome not reachable\n  (Session info: chrome=76.0.3809.100)",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
         "name" : "test_send_resume",
-        "uid" : "713751c266f87d69",
-        "parentUid" : "c919b2a64e6b5e0da57daeea043ab227",
+        "uid" : "18d6c5a6e74ce352",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1566222829104,
-          "stop" : 1566222852671,
-          "duration" : 23567
+          "start" : 1566316672209,
+          "stop" : 1566316707248,
+          "duration" : 35039
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "c919b2a64e6b5e0da57daeea043ab227"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
