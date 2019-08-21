@@ -4,9 +4,6 @@ TIMEOUT = 30
 WEBDRIVER = 'chrome_inc'
 URL = 'http://localhost:4200'
 
-# PAUSE = 1
-# EXTRA_LONG_PAUSE = 20
-
 EMAIL_SIGNUP = "rabotynet.test@gmail.com"
 FROM_SIGNUP = decode(b'cm9tYV9leHBlcnQ=').decode()
 
