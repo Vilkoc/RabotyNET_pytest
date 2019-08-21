@@ -1,8 +1,10 @@
+"""This module allows change data in user resume"""
 import allure
 
 
 @allure.feature('Changing data')
 def test_change_data(app, make_screen):
+    """Change data in "Position" field"""
     with allure.step('Log in'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')

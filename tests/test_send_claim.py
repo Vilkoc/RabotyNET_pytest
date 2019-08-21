@@ -1,8 +1,10 @@
+"""This module allows send claim to the company"""
 import allure
 
 
 @allure.feature('Sending claim')
 def test_send_claim(app, make_screen):
+    """Sending claim to the company"""
     with allure.step('Log in as user'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')

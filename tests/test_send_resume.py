@@ -1,8 +1,10 @@
+"""This module allows send resume to the company"""
 import allure
 
 
 @allure.feature('Sending resume')
 def test_send_resume(app, make_screen):
+    """Sending resume to the company"""
     with allure.step('Log in as user'):
         app.header.select_option('Log in')
         app.sign_in_page.login('USER')
