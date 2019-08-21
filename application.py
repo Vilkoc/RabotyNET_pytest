@@ -3,6 +3,7 @@ from pages.forgot_password_page import ForgotPasswordPage
 from pages.company_details_page import CompanyDetailsPage
 from pages.header import Header
 from pages.sign_in_page import SignInPage
+from pages.user_profile_page import UserPage
 from pages.vacancies_page import VacanciesPage
 from pages.hot_vacancies_page import HotVacanciesPage
 from pages.view_vacancy_page import ViewVacancyPage
@@ -39,3 +40,4 @@ class Application():
         self.company_details_page = CompanyDetailsPage(self.browser_init)
         self.hot_vacancies_page = HotVacanciesPage(self.browser_init)
         self.search_page = SearchPage(self.browser_init)
+        self.user_profile_page = UserPage(self.browser_init)

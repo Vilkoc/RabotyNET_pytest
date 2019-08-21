@@ -43,6 +43,11 @@ class DriverWrapper(object):
             if element.text == text_value:
                 element.click()
 
+    # def click_element_by_text(self, locator, text_value):
+    #     """Clicks on the element with text attribute text_value"""
+    #     element = self.wait_element_with_text(locator, text_value, timeout=10)
+    #     element.click()
+
     def click_element_by_text_simple(self, locator_and_text):
         """Clicks on the element with text attribute text_value"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator_and_text[0]))
@@ -165,4 +170,14 @@ class DriverWrapper(object):
                 return
         print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
+
+    def wait_element_with_attr(self, locator, attr, timeout=10):
+        """ Wait while element with certain text appears """
+        end = time.time() + timeout
+        while time.time() < end:
+            element = self.get_element(locator)
+            try:
+                return element.get_attribute(attr)
+            except:
+                pass
 

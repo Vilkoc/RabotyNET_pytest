@@ -13,9 +13,9 @@ from time import sleep
 @pytest.fixture(scope='session', autouse=True)
 def prep_db(worker_id):
     if worker_id == 'gw0' or worker_id == 'master':
-        # restart_tomcat()
+        restart_tomcat()
         prepare_db()
-    # sleep(40)
+    sleep(40)
 
 
 @pytest.fixture(scope='function')
@@ -34,6 +34,12 @@ def app(browser_init):
     browser_init.driver.quit()
 
 
+
+@pytest.fixture(scope='function')
+def get_to_user_profile(app):
+    app.header.select_option('Log in')
+    app.sign_in_page.login('USER')
+    app.header.select_option('Profile')
 @pytest.fixture(scope='function')
 def make_screen(browser_init, request):
     fails = request.session.testsfailed

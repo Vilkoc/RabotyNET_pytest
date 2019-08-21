@@ -16,6 +16,10 @@ class SignInPage:
         self.browser.clear_element(self.locators.PASSWORD)
         self.browser.send_keys(self.locators.PASSWORD, passwd)
 
+    def click_sign_in(self):
+        """Clicks 'Sign In' button"""
+        self.browser.click_element(self.locators.SIGN_IN)
+
     def login(self, person):
         """Logins any person. It starts from homepage for unlogined person"""
         self.enter_credentials(*Credentials[person])
