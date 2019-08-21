@@ -1,7 +1,8 @@
-from conftest import app
+"""This module allows you to automate creation of claim"""
 
 
 def test_admin_create_claim(app, make_screen):
+    """ Test-case that create claim to company"""
     app.header.select_option('Log in')
     app.sign_in_page.login('ADMIN')
     app.companies_page.view_detail_about_co()

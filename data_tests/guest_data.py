@@ -4,3 +4,4 @@ CHERNIVTSI = 'Chernivtsi'
 NEXT = 'Next »'
 PREVIOUS = '« Previous'
 TOP_VACANCY = "Junior Engineer"
+VAC_NAME = "QA Engineer"

@@ -1,7 +1,5 @@
-from locators import LocatorsCreateCompanyPage, LocatorsMyCompaniesPage
+from locators import LocatorsCreateCompanyPage, LocatorsMyCompaniesPage, LocatorsVacancies
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from config import TIMEOUT
 
 
 class CreateCompanyPage():
@@ -10,9 +8,9 @@ class CreateCompanyPage():
 
     def __init__(self, browser):
         self.locators = LocatorsCreateCompanyPage
-        self.loc = LocatorsMyCompaniesPage
+        self.locators_my_companies = LocatorsMyCompaniesPage
+        self.locators_vacancies = LocatorsVacancies
         self.browser = browser
-        self.wait = WebDriverWait(browser.driver, TIMEOUT)
 
     def enter_data(self, co_data):
         """Enters into the specific field data"""
@@ -21,6 +19,9 @@ class CreateCompanyPage():
 
     def click_create_button(self):
         self.browser.click_element(self.locators.COMPANY_CREATE_BUTTON)
+
+    def click_my_companies_tab(self):
+        self.browser.click_element_double_locator(self.locators_vacancies.DETAILS, self.locators_my_companies.MY_COMPANIES)
 
     def read_data(self):
         input_data = self.browser.read_data_in_textbox(self.locators.COMPANY_FIELDS,

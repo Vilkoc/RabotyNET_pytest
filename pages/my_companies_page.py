@@ -29,10 +29,6 @@ class MyCompaniesPage():
         self.browser.company_view_update_delete(self.locators.TABLE_BODY, self.locators.DELETE_COMPANY_BUTTON,
                                                 company_name)
 
-    def check_company_present(self, co_name):
-        tbody = self.browser.get_elements(self.locators.TABLE_BODY)
-        for element in tbody:
-            if co_name not in element.text:
-                return True
-            else:
-                return False
+    def check_company_absence(self, co_name):
+        company_absence_boolean = self.browser.check_absence_of_the_company(self.locators.TABLE_BODY, co_name)
+        return company_absence_boolean

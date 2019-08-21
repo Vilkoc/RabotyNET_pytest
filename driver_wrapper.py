@@ -81,6 +81,15 @@ class DriverWrapper(object):
             if company_name in element.text:
                 td = element.find_element(*locator2)
                 td.click()
+                break
+
+    def check_absence_of_the_company(self, table_locator, co_name):
+        tbody = self.driver.find_elements(*table_locator)
+        for element in tbody:
+            if co_name not in element.text:
+                return True
+            else:
+                return False
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
@@ -114,7 +123,6 @@ class DriverWrapper(object):
             if button.text == 'Change':
                 button.click()
                 break
-        # change.click()
 
     def invisibility_of_element(self, locator):
         """This function wait until element will be invisible"""
@@ -161,3 +169,4 @@ class DriverWrapper(object):
                 return
         print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
+

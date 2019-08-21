@@ -5,5 +5,9 @@ def build(c):
     run("nosetests --detailed-errors")
 
 @task
-def dell_allure(c):
-    run("Remove-Item 'C:\Users\Nazar\Desktop\RabotyNET_pytest'")
+def pylint(c):
+    c.run("pylint tests")
+
+@task
+def generAllure(c):
+    c.run("allure serve allure-results")

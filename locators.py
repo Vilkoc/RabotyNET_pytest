@@ -50,6 +50,7 @@ class LocatorsVacancies(object):
     NEXT_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     PREVIOUS_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     VIEW_DETAILS_BUTTON = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
+    RABOTY_NET = (By.LINK_TEXT, "RabotyNet")
     POP_UP_WINDOW_SIGN_UP_TEXT = (By.CSS_SELECTOR, 'div.wrap > p')
     POP_UP_WINDOW_SIGN_UP_BUTTON = (By.CSS_SELECTOR, 'div.wrap > button')
 
@@ -126,7 +127,7 @@ class LocatorsMyCompaniesPage(object):
     MY_COMPANIES = (By.CSS_SELECTOR, "a[href='/companies/my']")
     CREATE_COMPANY_BUTTON = (By.CSS_SELECTOR, "a[href='/createCompany']")
     COMPANY_DETAIL_BUTTON_SOFTSERVE = (By.CSS_SELECTOR, "a[href ='/viewCompany/1']")
-    TABLE_BODY = (By.CSS_SELECTOR, "table>tbody")
+    TABLE_BODY = (By.CSS_SELECTOR, ".table.table-striped tbody")
     DELETE_COMPANY_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-trash']")
     COMPANY_UPDATE_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-edit']")
 
