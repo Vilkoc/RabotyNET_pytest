@@ -35,18 +35,18 @@ class DriverWrapper(object):
         elements = self.get_elements(locator)
         elements[elem_number].click()
 
-    def click_element_by_text(self, locator, text_value):
-        """Clicks on the element with text attribute text_value"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
-        elements = self.get_elements(locator)
-        for element in elements:
-            if element.text == text_value:
-                element.click()
-
     # def click_element_by_text(self, locator, text_value):
     #     """Clicks on the element with text attribute text_value"""
-    #     element = self.wait_element_with_text(locator, text_value, timeout=10)
-    #     element.click()
+    #     WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
+    #     elements = self.get_elements(locator)
+    #     for element in elements:
+    #         if element.text == text_value:
+    #             element.click()
+
+    def click_element_by_text(self, locator, text_value):
+        """Clicks on the element with text attribute text_value"""
+        element = self.wait_element_with_text(locator, text_value, timeout=10)
+        element.click()
 
     def click_element_by_text_simple(self, locator_and_text):
         """Clicks on the element with text attribute text_value"""
