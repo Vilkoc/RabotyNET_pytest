@@ -1,8 +1,10 @@
+'''This module allows you to provide search'''
 import allure
 
 
 @allure.feature("Search page")
-def test_1search_button(app, make_screen):
+def test_search_button(app, make_screen):
+    """Provide search"""
     with allure.step('Go to vacancies page'):
         app.search_page.search_button_click()
 

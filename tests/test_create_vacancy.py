@@ -1,9 +1,12 @@
+'''This module allows you to automate the creation of the vacancy'''
 import allure
 from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Creation of the vacancy")
 def test_create_vacancy(app, make_screen):
+    '''Creation of the vacancy'''
+
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)
         app.sign_in_page.login(CownerData.PERSON)
@@ -26,7 +29,4 @@ def test_create_vacancy(app, make_screen):
         app.view_company_page.view_vacancy_details(CownerData.VACANCY_NAME)
         all_vacancy_data = app.create_vacancy_page.read_vacancy_data()
     with allure.step("Check the result"):
-        num_of_vac_data = 0
-        for vac_data in CownerData.VACANCY_DATA:
-            assert vac_data == all_vacancy_data[num_of_vac_data]
-            num_of_vac_data += 1
+        assert all_vacancy_data == CownerData.VACANCY_DATA

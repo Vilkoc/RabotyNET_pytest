@@ -21,13 +21,13 @@ class HotVacanciesPage():
         self.browser.click_element_by_text(self.locators.HOT_PAGINATION_PREVIOUS, guest_data.HOT_PREVIOUS)
 
     def details_text(self):
-        tmp = self.browser.pop_up_element(self.locators.HOT_VACANCY_INFO).text
-        return tmp
+        text_details = self.browser.pop_up_element(self.locators.HOT_VACANCY_INFO).text
+        return text_details
 
     def next_click_test(self):
-        tmp2 = self.browser.pop_up_element(self.locators.HOT_NEXT_TEST).text
-        return tmp2
+        click_next = self.browser.pop_up_element(self.locators.HOT_NEXT_TEST).text
+        return click_next
 
     def previous_click_test(self):
-        tmp3 = self.browser.pop_up_element(self.locators.HOT_PREVIOUS_TEST).text
-        return tmp3
+        click_previous = self.browser.pop_up_element(self.locators.HOT_PREVIOUS_TEST).text
+        return click_previous

@@ -11,7 +11,6 @@ class VacanciesPage:
 
     def is_confirmation_sent(self):
         text = self.browser.get_text_of_element(self.locators.POP_UP_WINDOW_SIGN_UP_TEXT)
-        # print(text)
         return text == 'User has been created successfully. Confirm your email and login into site!'
 
     def click_confirmation_link(self, link):
@@ -48,13 +47,13 @@ class VacanciesPage:
         self.browser.click_element_by_text(self.locators.PAGINATION_PREVIOUS, guest_data.PREVIOUS)
 
     def details_text(self):
-        tmp = self.browser.pop_up_element(self.locators.VACANCY_INFO).text
-        return tmp
+        text_details = self.browser.pop_up_element(self.locators.VACANCY_INFO).text
+        return text_details
 
     def next_click_test(self):
-        tmp2 = self.browser.pop_up_element(self.locators.NEXT_TEST).text
-        return tmp2
+        click_next = self.browser.pop_up_element(self.locators.NEXT_TEST).text
+        return click_next
 
     def previous_click_test(self):
-        tmp3 = self.browser.pop_up_element(self.locators.PREVIOUS_TEST).text
-        return tmp3
+        click_previous = self.browser.pop_up_element(self.locators.PREVIOUS_TEST).text
+        return click_previous
