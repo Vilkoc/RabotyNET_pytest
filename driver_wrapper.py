@@ -84,12 +84,12 @@ class DriverWrapper(object):
                 break
 
     def check_absence_of_the_company(self, table_locator, co_name):
+        self.wait_of_quantity_elements(table_locator, 16)
         tbody = self.driver.find_elements(*table_locator)
         for element in tbody:
-            if co_name not in element.text:
-                return True
-            else:
+            if co_name in element.text:
                 return False
+        return True
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
@@ -119,7 +119,6 @@ class DriverWrapper(object):
         """Special function for press 'Change' button"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_wait))
         buttons = self.get_elements(locator_buttons)
-        # change = None
         for button in buttons:
             if button.text == 'Change':
                 button.click()

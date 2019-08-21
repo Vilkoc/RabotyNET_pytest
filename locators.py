@@ -130,7 +130,7 @@ class LocatorsMyCompaniesPage(object):
     TABLE_BODY = (By.CSS_SELECTOR, ".table.table-striped tbody")
     DELETE_COMPANY_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-trash']")
     COMPANY_UPDATE_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-edit']")
-
+    TD = (By.CSS_SELECTOR, "table > tbody td")
 
 class LocatorsViewCompany(object):
     DESCRIPTION_OF_CLAIM = 'description'

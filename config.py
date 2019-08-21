@@ -15,7 +15,7 @@ SMTP_SERVER = "imap.gmail.com"
 DB_FILE = 'backup.sql'
 DB_NAME = 'rabotyNET'
 DB_USER = 'postgres'
-DB_PASS = 'root'
+DB_PASS = 'postgres'
 DB_HOST = 'localhost'
 
 EMAIL_SUBJECT_SIGNUP = "Registration on website RabotyNet"
@@ -28,5 +28,5 @@ USERNAME_PASSW_RECOVERY = 'rabotynet.test.fp@gmail.com'
 OLD_PASSWORD = 'Qdrwbj!23'
 NEW_PASSWORD = 'Qdrwbj1@3'
 
-TOMCAT_PATH = 'C:/Users/sdiedtc/Documents/web/apache-tomcat-9.0.10/bin/'
+TOMCAT_PATH = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/'
 

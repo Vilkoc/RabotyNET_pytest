@@ -30,5 +30,5 @@ class MyCompaniesPage():
                                                 company_name)
 
     def check_company_absence(self, co_name):
-        company_absence_boolean = self.browser.check_absence_of_the_company(self.locators.TABLE_BODY, co_name)
+        company_absence_boolean = self.browser.check_absence_of_the_company(self.locators.TD, co_name)
         return company_absence_boolean
