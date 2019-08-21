@@ -16,7 +16,6 @@ class LocatorsHeader():
 class LocatorsSignIn():
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
-    SIGN_IN = (By.CSS_SELECTOR, "input[value='Sign In']")
     SIGNUP = (By.ID, "login1")
     PASSWORD_SIGNUP = (By.ID, "password1")
     PASSWORD_VERIFY = (By.ID, "matchingPassword")

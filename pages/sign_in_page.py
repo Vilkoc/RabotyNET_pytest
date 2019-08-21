@@ -18,7 +18,7 @@ class SignInPage:
 
     def click_sign_in(self):
         """Clicks 'Sign In' button"""
-        self.browser.click_element(self.locators.SIGN_IN)
+        self.browser.click_element(self.locators. BUTTON_SIGN_IN)
 
     def login(self, person):
         """Logins any person. It starts from homepage for unlogined person"""
@@ -30,9 +30,6 @@ class SignInPage:
 
     def enter_sign_in_password(self, password):
         self.browser.send_keys(self.locators.PASSWORD_SIGN_IN, password)
-
-    def click_sign_in(self):
-        self.browser.click_element(self.locators.BUTTON_SIGN_IN)
 
     def click_sign_up_tab(self):
         self.browser.click_element_by_text(self.locators.TAB_SIGN_UP, "Sign Up")
