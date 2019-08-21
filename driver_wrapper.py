@@ -95,7 +95,6 @@ class DriverWrapper(object):
         """Gets values from the input fields by attribute and return a list of this values"""
         data_list = []
         for el in range(len(locator_list)):
-            WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_list[el]))
             data = self.driver.find_element_by_id(locator_list[el]).get_attribute(
                 locator_attribute)
             data_list.append(data)
@@ -105,9 +104,6 @@ class DriverWrapper(object):
         """ Get text from element """
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.get_element(locator).text
-
-    def pause(self, time):
-        webdriver.support.wait.time.sleep(time)
 
     def click_element_double_locator(self, locator_wait, locator_element):
         """This function takes two locators, first one for 'WebDriverWait', the second one for click on the element"""
