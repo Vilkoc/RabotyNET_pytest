@@ -86,6 +86,7 @@ class DriverWrapper(object):
         """Gets values from the input fields by attribute and return a list of this values"""
         data_list = []
         for el in range(len(locator_list)):
+            WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_list[el]))
             data = self.driver.find_element_by_id(locator_list[el]).get_attribute(
                 locator_attribute)
             data_list.append(data)
