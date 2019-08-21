@@ -6,6 +6,7 @@ from utilities.db import change_varification_link, wait_user_update
 
 MOCK_CONFIRMATION_LINK = 'http://localhost:4200/users/auth/confirm?token=3e83667c-c59c-4fda-aa7a-a47346a3cd6a'
 
+
 @allure.feature('Sign up')
 def test_sign_up(app, make_screen):
     """ Testcase for sign up user. """

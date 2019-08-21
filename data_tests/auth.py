@@ -17,10 +17,10 @@ OLD_PASSWORD = 'Qdrwbj!23'
 NEW_PASSWORD = 'Qdrwbj1@3'
 
 LOGIN = [
-        ('admin@gmail.com', 'admin', 'Сompanies'),
-        ('user@gmail.com', 'user', 'Create company'),
-        ('cowner@gmail.com', 'cowner', 'My companies')
-    ]
+    ('admin@gmail.com', 'admin', 'Сompanies'),
+    ('user@gmail.com', 'user', 'Create company'),
+    ('cowner@gmail.com', 'cowner', 'My companies')
+]
 
 IS_LOGINED = 'Log out'
 IS_CONFIRMATION_SENT = 'User has been created successfully. Confirm your email and login into site!'

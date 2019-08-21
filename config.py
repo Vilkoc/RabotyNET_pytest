@@ -29,4 +29,3 @@ OLD_PASSWORD = 'Qdrwbj!23'
 NEW_PASSWORD = 'Qdrwbj1@3'
 
 TOMCAT_PATH = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/'
-

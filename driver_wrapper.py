@@ -180,4 +180,3 @@ class DriverWrapper(object):
                 return element.get_attribute(attr)
             except:
                 pass
-

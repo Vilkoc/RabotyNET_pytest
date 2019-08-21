@@ -131,6 +131,7 @@ class LocatorsMyCompaniesPage(object):
     COMPANY_UPDATE_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-edit']")
     TD = (By.CSS_SELECTOR, "table > tbody td")
 
+
 class LocatorsViewCompany(object):
     DESCRIPTION_OF_CLAIM = 'description'
     CREATE_VACANCY_BUTTON = (By.CSS_SELECTOR, "a[href='/createVacancy/1']")

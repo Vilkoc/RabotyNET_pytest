@@ -1,5 +1,5 @@
-import pytest
 import allure
+import pytest
 from data_tests.user_data import user_data_rab_19 as entry
 
 

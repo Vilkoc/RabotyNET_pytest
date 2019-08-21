@@ -11,7 +11,7 @@ def test_vacancies(app, make_screen):
 
     with allure.step('View details of vacancy'):
         details = app.vacancies_page.details_text()
-        assert details == guest_data.TOP_VACANCY
+        assert details == guest_data.VAC_NAME
 
     with allure.step('Click button "next"'):
         app.vacancies_page.click_pagination_next()

@@ -11,4 +11,3 @@ def test_block_co(app, make_screen):
     app.companies_page.block_co()
 
     assert app.companies_page.confirm_with_popup() == "Company blocked"
-
