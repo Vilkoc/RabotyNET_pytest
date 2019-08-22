@@ -43,11 +43,6 @@ class DriverWrapper(object):
             if element.text == text_value:
                 element.click()
 
-    # def click_element_by_text(self, locator, text_value):
-    #     """Clicks on the element with text attribute text_value"""
-    #     element = self.wait_element_with_text(locator, text_value, timeout=10)
-    #     element.click()
-
     def clear_element(self, locator, text_value='default'):
         """Clears the element with the specific text_value"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.presence_of_element_located(locator))
