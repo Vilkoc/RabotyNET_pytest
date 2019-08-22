@@ -35,26 +35,18 @@ class DriverWrapper(object):
         elements = self.get_elements(locator)
         elements[elem_number].click()
 
-    # def click_element_by_text(self, locator, text_value):
-    #     """Clicks on the element with text attribute text_value"""
-    #     WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
-    #     elements = self.get_elements(locator)
-    #     for element in elements:
-    #         if element.text == text_value:
-    #             element.click()
-
     def click_element_by_text(self, locator, text_value):
         """Clicks on the element with text attribute text_value"""
-        element = self.wait_element_with_text(locator, text_value, timeout=10)
-        element.click()
-
-    def click_element_by_text_simple(self, locator_and_text):
-        """Clicks on the element with text attribute text_value"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator_and_text[0]))
-        elements = self.get_elements(locator_and_text[0])
+        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
+        elements = self.get_elements(locator)
         for element in elements:
-            if element.text == locator_and_text[1]:
+            if element.text == text_value:
                 element.click()
+
+    # def click_element_by_text(self, locator, text_value):
+    #     """Clicks on the element with text attribute text_value"""
+    #     element = self.wait_element_with_text(locator, text_value, timeout=10)
+    #     element.click()
 
     def clear_element(self, locator, text_value='default'):
         """Clears the element with the specific text_value"""
@@ -89,7 +81,7 @@ class DriverWrapper(object):
                 break
 
     def check_absence_of_the_company(self, table_locator, co_name):
-        self.wait_of_quantity_elements(table_locator, 16)
+        self.wait_of_quantity_elements(table_locator, 24)
         tbody = self.driver.find_elements(*table_locator)
         for element in tbody:
             if co_name in element.text:
