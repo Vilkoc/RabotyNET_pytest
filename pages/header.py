@@ -5,7 +5,7 @@ from locators import LocatorsYourResume
 
 
 class Header:
-    """Header page, which will be inherited by other pages"""
+    """Header describes navigation panel. It is present on each page"""
     def  __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
