@@ -5,7 +5,7 @@ from locators import LocatorsYourResume
 
 
 class Header:
-    """Header page, which will be inherited by other pages"""
+    """This is navigation panel present for all pages"""
     def __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
@@ -43,7 +43,10 @@ class Header:
         if pick_item not in values:
             raise Exception('Incorrect value for click_dropdown function')
         self.click_icon()
-        self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        while self.check_dropdown():
+            self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        else:
+            self.click_icon()
 
     def person_verify(self, person):
         """Returns True if the number of elements on the navbar equals to the person_criteria"""
