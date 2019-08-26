@@ -77,7 +77,6 @@ class DriverWrapper(object):
 
     def check_absence_of_the_company(self, table_locator, co_name):
         """Returns True if company is absent"""
-        self.wait_of_quantity_elements(table_locator, 24)
         tbody = self.driver.find_elements(*table_locator)
         for element in tbody:
             if co_name in element.text:
