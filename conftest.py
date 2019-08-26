@@ -1,3 +1,4 @@
+"""This module contains project fixtures"""
 import pytest
 from application import Application
 from driver_wrapper import DriverWrapper
@@ -10,12 +11,14 @@ from allure_commons.types import AttachmentType
 
 @pytest.fixture(scope='session', autouse=True)
 def prep_db(worker_id):
+    """Prepares DB for running"""
     if worker_id == 'gw0' or worker_id == 'master':
         prepare_db()
 
 
 @pytest.fixture(scope='function')
 def browser_init():
+    """Initiation of webdriver"""
     driver = WebdriverSelection().get_webdriver(WEBDRIVER)
     driver.maximize_window()
     driver.get(URL)
@@ -25,6 +28,7 @@ def browser_init():
 
 @pytest.fixture(scope='function')
 def app(browser_init):
+    """Instantiation of all pages"""
     selenium_test_base = Application(browser_init)
     yield selenium_test_base
     browser_init.driver.quit()
@@ -32,6 +36,7 @@ def app(browser_init):
 
 @pytest.fixture(scope='function')
 def get_to_user_profile(app):
+    """Transfers to user profile page"""
     app.header.select_option('Log in')
     app.sign_in_page.login('USER')
     app.header.select_option('Profile')
@@ -39,6 +44,7 @@ def get_to_user_profile(app):
 
 @pytest.fixture(scope='function')
 def make_screen(browser_init, request):
+    """Makes screenshot if exception appears"""
     fails = request.session.testsfailed
 
     def screen():

@@ -10,13 +10,13 @@ def test_send_claim(app, make_screen):
         app.sign_in_page.login('USER')
 
     with allure.step('Go to all vacancy page'):
-        app.header.go_to_allVacancies()
+        app.header.go_to_all_vacancies()
 
     with allure.step('View vacancy details'):
-        app.vacancies_page.click_viewDetails_button()
+        app.vacancies_page.click_view_details_button()
 
     with allure.step('View company details'):
-        app.view_vacancy_page.click_showCompany_button()
+        app.view_vacancy_page.click_show_company_button()
 
     with allure.step('Creating claim'):
         app.view_company_page.click_claim_button()

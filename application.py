@@ -1,3 +1,4 @@
+"""This module initialize project pages"""
 from pages.confirm_password_page import ConfirmPassword
 from pages.forgot_password_page import ForgotPasswordPage
 from pages.company_details_page import CompanyDetailsPage

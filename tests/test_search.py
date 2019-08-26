@@ -1,4 +1,4 @@
-'''This module allows you to provide search'''
+"""This module allows you to provide search"""
 import allure
 
 

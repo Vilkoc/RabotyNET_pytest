@@ -1,3 +1,6 @@
+"""This module contains company owner data"""
+
+
 class CownerData():
     PERSON = "COWNER"
 

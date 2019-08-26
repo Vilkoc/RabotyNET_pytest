@@ -1,8 +1,9 @@
-from locators import LocatorsCreateVacancyPage
-from locators import LocatorsCreateCompanyPage
+"""This module contains methods that allow company owner to create a vacancy"""
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from locators import LocatorsCreateVacancyPage
+from locators import LocatorsCreateCompanyPage
 from config import TIMEOUT
 
 
@@ -17,16 +18,19 @@ class CreateVacancyPage():
 
     def enter_vacancy_data(self, vac_data):
         """Enters into the specific field data"""
-        for el in range(len(self.locators.VACANCY_FIELDS)):
-            self.browser.send_keys((By.ID, self.locators.VACANCY_FIELDS[el]), vac_data[el])
+        for field in range(len(self.locators.VACANCY_FIELDS)):
+            self.browser.send_keys((By.ID, self.locators.VACANCY_FIELDS[field]), vac_data[field])
 
     def choose_employment(self):
+        """Choosing the employment type from the drop-down list"""
         self.browser.click_element(self.locators.VACANCY_EMPLOYMENT_DROPBOX)
 
     def choose_currency(self):
+        """Choosing the currency from the drop-down list"""
         self.browser.click_element(self.locators.VACANCY_CURRRENCY_DROPBOX)
 
     def click_add_requirement(self):
+        """Clicks on the 'add' button that adds a requirement"""
         self.browser.click_element(self.locators.ADD_REQUIREMENT_BUTTON)
 
     def enter_requirements(self, req):
@@ -39,10 +43,12 @@ class CreateVacancyPage():
             index_of_textbox += 1
 
     def click_vacancy_create(self):
+        """Clacks on the 'Create' vacancy that saves all vacancy data"""
         self.wait.until(EC.element_to_be_clickable(self.locators.VACANCY_CREATE_BUTTON))
         self.browser.click_element(self.locators.VACANCY_CREATE_BUTTON)
 
     def read_vacancy_data(self):
+        """Extracts text data from specified textbox"""
         vacancy_data = self.browser.read_data_in_textbox(self.locators.VACANCY_FIELDS,
-                                              self.loc.ATTRIBUTE_OF_COMPANIES_VACANCIES_TEXTBOXES)
+                                                         self.loc.ATTRIBUTE_OF_COMPANIES_VACANCIES_TEXTBOXES)
         return vacancy_data

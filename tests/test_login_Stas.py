@@ -10,22 +10,19 @@ import allure
     ('cowner@gmail.com', 'cowner', 'My companies')
 ])
 def test_login_logout(app, make_screen, user, password, expected):
-    """ Testcase for user login.
+    """ Test case for user login.
         Try to login for each user"""
-
-    app.header.click_icon()
-    app.header.click_log_in()
-
-    app.sign_in_page.enter_sign_in_email(user)
-    app.sign_in_page.enter_sign_in_password(password)
-    app.sign_in_page.click_sign_in()
-
+    with allure.step("Log in"):
+        app.header.click_icon()
+        app.header.click_log_in()
+        app.sign_in_page.enter_sign_in_email(user)
+        app.sign_in_page.enter_sign_in_password(password)
+        app.sign_in_page.click_sign_in()
     with allure.step('Check if user logined'):
         assert app.header.is_logined(), "No 'log out' link"
         app.header.click_icon()
-
     with allure.step('Check if user authorized'):
         assert app.header.get_text_of_first_link() == expected, 'Wrong link text'
-
-    app.header.click_icon()
-    app.header.click_log_out()
+    with allure.step("Log out"):
+        app.header.click_icon()
+        app.header.click_log_out()

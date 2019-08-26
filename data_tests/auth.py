@@ -1,3 +1,4 @@
+"""Thia module contains user data for sign up/sign in/log out methods"""
 from base64 import b64decode as decode
 
 EMAIL_SIGNUP = "rabotynet.test@gmail.com"
@@ -8,8 +9,10 @@ FROM_FORGOT_PASSWORD = decode(b'cm9tYV9leHBlcnQ=').decode()
 
 EMAIL_SUBJECT_SIGNUP = "Registration on website RabotyNet"
 USERNAME_SIGNUP = 'rabotynet.test@gmail.com'
+USER_MAIL = "user@gmail.com"
+WRONG_MAIL = "user@gmail"
 PASSWORD = 'Qdrwbj!23'
-PASSWORD_INCORRECT = 'vdeytvdv'
+PASSWORD_INCORRECT = "yneoi"
 
 EMAIL_SUBJECT_PASSW_RECOVERY = 'Restore password on website RabotyNet'
 USERNAME_PASSW_RECOVERY = 'rabotynet.test.fp@gmail.com'

@@ -1,10 +1,12 @@
+"""This module contains methods that interact with database"""
 import psycopg2
-from config import DB_FILE, DB_NAME, DB_USER, DB_PASS, DB_HOST, TOMCAT_PATH
+from config import DB_FILE, DB_NAME, DB_USER, DB_PASS, DB_HOST
 import time
 from config import TIMEOUT
-import subprocess
+
 
 def prepare_db():
+    """Cleaning database before test execution"""
     table_list = ['users', 'contact', 'address', 'claim', 'company', 'education', 'job',
                   'pdf_resume', 'person', 'photo', 'requirement', 'resume', 'roles',
                   'skill', 'user_role', 'vacancy', 'vacancy_resume',
@@ -24,6 +26,7 @@ def prepare_db():
 
 
 def change_varification_link(user):
+    """Changing the link in the project database"""
     with psycopg2.connect(dbname=DB_NAME, user=DB_USER,
                           password=DB_PASS, host=DB_HOST) as conn:
         cur = conn.cursor()
@@ -32,7 +35,7 @@ def change_varification_link(user):
 
 
 def wait_user_update(user, timeout=TIMEOUT):
-    """ Wait while user will be registered in db """
+    """ Wait while user will be registered in db"""
     end = time.time() + timeout
     with psycopg2.connect(dbname=DB_NAME, user=DB_USER,
                           password=DB_PASS, host=DB_HOST) as conn:
@@ -45,9 +48,3 @@ def wait_user_update(user, timeout=TIMEOUT):
             if result == True:
                 return
     raise Exception("No enougth elements")
-
-
-def restart_tomcat():
-    subprocess.call('shutdown.bat', shell=True, cwd=TOMCAT_PATH)
-    time.sleep(TIMEOUT)
-    subprocess.Popen(TOMCAT_PATH + 'startup.bat', stdout=subprocess.PIPE, shell=True, cwd=TOMCAT_PATH)

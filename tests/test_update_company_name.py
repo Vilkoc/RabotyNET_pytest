@@ -1,11 +1,11 @@
-'''This module allows you to automate the updating of the company name'''
+"""This module allows you to automate the updating of the company name"""
 import allure
 from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Updating of the company name")
 def test_update_company_name(app, make_screen):
-    '''Updating of the company name'''
+    """Updating of the company name"""
 
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)

@@ -1,11 +1,11 @@
-'''This module allows you to automate the creation of the company'''
+"""This module allows you to automate the creation of the company"""
 import allure
 from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Creation of the company")
 def test_create_company(app, make_screen):
-    '''Creation of the company'''
+    """Creation of the company"""
 
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)

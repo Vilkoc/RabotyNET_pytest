@@ -1,7 +1,8 @@
+"""This module contains data for db connection and running tests"""
 from base64 import b64decode as decode
 
 TIMEOUT = 30
-WEBDRIVER = 'chrome_inc'
+WEBDRIVER = 'chrome'
 URL = 'http://localhost:4200'
 
 EMAIL_SIGNUP = "rabotynet.test@gmail.com"
@@ -28,4 +29,3 @@ USERNAME_PASSW_RECOVERY = 'rabotynet.test.fp@gmail.com'
 OLD_PASSWORD = 'Qdrwbj!23'
 NEW_PASSWORD = 'Qdrwbj1@3'
 
-TOMCAT_PATH = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/'

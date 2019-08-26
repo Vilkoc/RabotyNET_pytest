@@ -1,6 +1,6 @@
+"""This module contains methods that are wrappers for drivers methods"""
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium import webdriver
 from config import TIMEOUT
 import time
 
@@ -43,7 +43,7 @@ class DriverWrapper(object):
             if element.text == text_value:
                 element.click()
 
-    def clear_element(self, locator, text_value='default'):
+    def clear_element(self, locator):
         """Clears the element with the specific text_value"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.presence_of_element_located(locator))
         self.get_element(locator).clear()
@@ -76,7 +76,8 @@ class DriverWrapper(object):
                 break
 
     def check_absence_of_the_company(self, table_locator, co_name):
-        self.wait_of_quantity_elements(table_locator, 24)
+        """Returns True if company is absent"""
+        self.wait_of_quantity_elements(table_locator, 16)
         tbody = self.driver.find_elements(*table_locator)
         for element in tbody:
             if co_name in element.text:
@@ -144,21 +145,18 @@ class DriverWrapper(object):
                         return element
                 except:
                     pass
-        print('====data:', locator, text)
         raise Exception("Time out to find element")
 
     def wait_of_quantity_elements(self, locator, quantity, timeout=TIMEOUT):
         """ Wait while on page will be certain quantity of elements"""
         end = time.time() + timeout
-
         while time.time() < end:
             elements = self.get_elements(locator)
             if len(elements) >= quantity:
                 return
-        print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
 
-    def wait_element_with_attr(self, locator, attr, timeout=10):
+    def wait_element_with_attr(self, locator, attr, timeout=TIMEOUT):
         """ Wait while element with certain text appears """
         end = time.time() + timeout
         while time.time() < end:

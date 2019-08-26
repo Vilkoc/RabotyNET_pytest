@@ -1,11 +1,11 @@
-'''This module allows you to automate the creation of the vacancy'''
+"""This module allows you to automate the creation of the vacancy"""
 import allure
 from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Creation of the vacancy")
 def test_create_vacancy(app, make_screen):
-    '''Creation of the vacancy'''
+    """Creation of the vacancy"""
 
     with allure.step("Login"):
         app.header.select_option(CownerData.OPTION)

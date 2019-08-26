@@ -1,7 +1,7 @@
 """Checks login for all persons: admin, cowner, user"""
 import allure
-from credentials import Credentials
 import pytest
+from credentials import Credentials
 
 
 @allure.feature('Login all users')

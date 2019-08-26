@@ -1,4 +1,4 @@
-'''This module allows you to view vacancies'''
+"""This module allows you to view vacancies"""
 import allure
 from data_tests import guest_data
 
@@ -17,8 +17,8 @@ def test_vacancies(app, make_screen):
         app.vacancies_page.click_pagination_next()
 
     with allure.step('Check assertion of button "next"'):
-        next = app.vacancies_page.next_click_test()
-        assert next == guest_data.TOP_VACANCY
+        click_next = app.vacancies_page.next_click_test()
+        assert click_next == guest_data.TOP_VACANCY
 
     with allure.step('Click button "previous"'):
         app.vacancies_page.click_pagination_previous()
