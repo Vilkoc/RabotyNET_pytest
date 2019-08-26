@@ -32,10 +32,10 @@ class HotVacanciesPage():
 
     def next_click_test(self):
         """Returns text from the vacancy on the next page"""
-        click_next = self.browser.pop_up_element(self.locators.HOT_NEXT_TEST).text
-        return click_next
+        next_text = self.browser.pop_up_element(self.locators.HOT_NEXT_TEST).text
+        return next_text
 
     def previous_click_test(self):
         """Returns text from the vacancy on the previous page"""
-        click_previous = self.browser.pop_up_element(self.locators.HOT_PREVIOUS_TEST).text
-        return click_previous
+        previous_text = self.browser.pop_up_element(self.locators.HOT_PREVIOUS_TEST).text
+        return previous_text
