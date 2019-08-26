@@ -39,5 +39,6 @@ class MyCompaniesPage():
 
     def check_company_absence(self, co_name):
         """Returns True if company is deleted"""
+        self.wait.until(EC.visibility_of_element_located(self.locators.TABLE_BODY))
         company_absence_boolean = self.browser.check_absence_of_the_company(self.locators.TD, co_name)
         return company_absence_boolean
