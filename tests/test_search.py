@@ -3,7 +3,7 @@ import allure
 
 @allure.feature("Search page")
 @allure.description("Opisanie")
-@allure.story("Searching for vacancy")
+@allure.story("пошук вакансії")
 def test_1search_button(app, make_screen):
     with allure.step('Go to vacancies page'):
         app.search_page.search_button_click()
