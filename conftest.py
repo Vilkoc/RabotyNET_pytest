@@ -1,12 +1,13 @@
 """This module contains project fixtures"""
 import pytest
+import allure
 from application import Application
 from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
-import allure
 from allure_commons.types import AttachmentType
+from utilities.db import restart_tomcat
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -55,3 +56,11 @@ def get_to_user_profile(app):
     app.header.select_option('Log in')
     app.sign_in_page.login('USER')
     app.header.select_option('Profile')
+
+
+@pytest.fixture(scope='session')
+def restart_tomcat_func(request):
+    def restart():
+        restart_tomcat()
+
+    request.addfinalizer(restart)
