@@ -3,8 +3,7 @@ import allure
 import pytest
 
 @allure.feature('Sending resume')
-@pytest.mark.skip(reason = 'Problems with the database')
-def test_send_resume(app, make_screen):
+def test_send_resume(app):
     """Sending resume to the company"""
     with allure.step('Log in as user'):
         app.header.select_option('Log in')
