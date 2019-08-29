@@ -1,6 +1,6 @@
+"""This module contains methods that are wrappers for drivers methods"""
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium import webdriver
 from config import TIMEOUT
 import time
 
@@ -43,15 +43,7 @@ class DriverWrapper(object):
             if element.text == text_value:
                 element.click()
 
-    def click_element_by_text_simple(self, locator_and_text):
-        """Clicks on the element with text attribute text_value"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator_and_text[0]))
-        elements = self.get_elements(locator_and_text[0])
-        for element in elements:
-            if element.text == locator_and_text[1]:
-                element.click()
-
-    def clear_element(self, locator, text_value='default'):
+    def clear_element(self, locator):
         """Clears the element with the specific text_value"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.presence_of_element_located(locator))
         self.get_element(locator).clear()
@@ -81,6 +73,15 @@ class DriverWrapper(object):
             if company_name in element.text:
                 td = element.find_element(*locator2)
                 td.click()
+                break
+
+    def check_absence_of_the_company(self, table_locator, co_name):
+        """Returns True if company is absent"""
+        tbody = self.driver.find_elements(*table_locator)
+        for element in tbody:
+            if co_name in element.text:
+                return False
+        return True
 
     def read_data_in_textbox(self, locator_list, locator_attribute):
         """Gets values from the input fields by attribute and return a list of this values"""
@@ -96,9 +97,6 @@ class DriverWrapper(object):
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator))
         return self.get_element(locator).text
 
-    def pause(self, time):
-        webdriver.support.wait.time.sleep(time)
-
     def click_element_double_locator(self, locator_wait, locator_element):
         """This function takes two locators, first one for 'WebDriverWait', the second one for click on the element"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_wait))
@@ -109,12 +107,10 @@ class DriverWrapper(object):
         """Special function for press 'Change' button"""
         WebDriverWait(self.driver, self.default_timeout).until(EC.visibility_of_element_located(locator_wait))
         buttons = self.get_elements(locator_buttons)
-        # change = None
         for button in buttons:
             if button.text == 'Change':
                 button.click()
                 break
-        # change.click()
 
     def invisibility_of_element(self, locator):
         """This function wait until element will be invisible"""
@@ -148,16 +144,23 @@ class DriverWrapper(object):
                         return element
                 except:
                     pass
-        print('====data:', locator, text)
         raise Exception("Time out to find element")
 
     def wait_of_quantity_elements(self, locator, quantity, timeout=TIMEOUT):
         """ Wait while on page will be certain quantity of elements"""
         end = time.time() + timeout
-
         while time.time() < end:
             elements = self.get_elements(locator)
             if len(elements) >= quantity:
                 return
-        print('====data:', locator, quantity, len(elements))
         raise Exception("No enougth elements")
+
+    def wait_element_with_attr(self, locator, attr, timeout=TIMEOUT):
+        """ Wait while element with certain text appears """
+        end = time.time() + timeout
+        while time.time() < end:
+            element = self.get_element(locator)
+            try:
+                return element.get_attribute(attr)
+            except:
+                pass

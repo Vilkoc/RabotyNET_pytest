@@ -1,22 +1,28 @@
+"""This module contains project fixtures"""
 import pytest
-from allure_commons.types import AttachmentType
 from application import Application
 from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
-from utilities.del_from_db import delete_from_vacancy_resume
-from utilities.del_from_db import delete_from_claim
 import allure
+from allure_commons.types import AttachmentType
+
+
+@pytest.fixture(scope='session', autouse=True)
+def prep_db(worker_id):
+    """Prepares DB for running"""
+    if worker_id == 'gw0' or worker_id == 'master':
+        prepare_db()
 
 
 @pytest.fixture(scope='function')
 def browser_init():
+    """Initiation of webdriver"""
     driver = WebdriverSelection().get_webdriver(WEBDRIVER)
     driver.maximize_window()
     driver.get(URL)
     browser = DriverWrapper(driver, TIMEOUT)
-
     return browser
 
 
@@ -33,6 +39,7 @@ def pytest_runtest_makereport(item):
 
 @pytest.fixture(scope='function')
 def app(browser_init, request):
+    """Instantiation of all pages"""
     selenium_test_base = Application(browser_init)
 
     def teardown():
@@ -45,7 +52,9 @@ def app(browser_init, request):
     return selenium_test_base
 
 
-@pytest.fixture(scope='session', autouse='True')
-def prep_db():
-    delete_from_vacancy_resume()
-    delete_from_claim()
+@pytest.fixture(scope='function')
+def get_to_user_profile(app):
+    """Transfers to user profile page"""
+    app.header.select_option('Log in')
+    app.sign_in_page.login('USER')
+    app.header.select_option('Profile')

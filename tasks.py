@@ -1,3 +1,4 @@
+"""This module contains tasks for the project"""
 from invoke import task
 
 

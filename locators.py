@@ -1,7 +1,9 @@
+"""This module contains project locators"""
 from selenium.webdriver.common.by import By
 
 
 class LocatorsHeader():
+    """Navigation bar locators"""
     ICON = (By.CSS_SELECTOR, "img[class='rounded-circle img-responsive z-depth-0']")
     DROPDOWN = (By.CSS_SELECTOR, "a[class='dropdown-item']")
     CHECK_DROPDOWN = (By.CSS_SELECTOR, "a[data-toggle='dropdown']")
@@ -14,9 +16,9 @@ class LocatorsHeader():
 
 
 class LocatorsSignIn():
+    """Sign in page locators"""
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
-    SIGN_IN = (By.CSS_SELECTOR, "input[value='Sign In']")
     SIGNUP = (By.ID, "login1")
     PASSWORD_SIGNUP = (By.ID, "password1")
     PASSWORD_VERIFY = (By.ID, "matchingPassword")
@@ -42,8 +44,8 @@ class LocatorsSignIn():
     POP_UP_FORGOT_PASSWORD_TEXT_CHECK = 'Password restored successfully! Please sign in.'
 
 
-
 class LocatorsVacancies(object):
+    """Vacancies locators"""
     DETAILS = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
     PAGINATION_NEXT = (By.CSS_SELECTOR, 'button[class="btn btn-info"]')
     PAGINATION_PREVIOUS = (By.CSS_SELECTOR, 'button[class="btn btn-info"]')
@@ -51,6 +53,7 @@ class LocatorsVacancies(object):
     NEXT_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     PREVIOUS_TEST = (By.CSS_SELECTOR, 'div[class="card"]>h2')
     VIEW_DETAILS_BUTTON = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
+    RABOTY_NET = (By.LINK_TEXT, "RabotyNet")
     POP_UP_WINDOW_SIGN_UP_TEXT = (By.CSS_SELECTOR, 'div.wrap > p')
     POP_UP_WINDOW_SIGN_UP_BUTTON = (By.CSS_SELECTOR, 'div.wrap > button')
 
@@ -59,6 +62,7 @@ class LocatorsVacancies(object):
 
 
 class LocatorsHotVacancies(object):
+    """Hot vacancies locators"""
     HOT_DETAILS = (By.CSS_SELECTOR, 'a[href="/viewVacancy/34"]')
     HOT_PAGINATION_NEXT = (By.CSS_SELECTOR, 'button[class="btn btn-info"]')
     HOT_PAGINATION_PREVIOUS = (By.CSS_SELECTOR, 'button[class="btn btn-info"]')
@@ -69,6 +73,7 @@ class LocatorsHotVacancies(object):
 
 
 class LocatorsSearch(object):
+    """Search locators"""
     SEARCH = (By.CSS_SELECTOR, 'button[class="btn btn-outline-success my-2 my-sm-0"]')
     CRITERIA = (By.CSS_SELECTOR, 'option[value="city"]')
     KEY_WORD = (By.NAME, 'searchText')
@@ -77,6 +82,7 @@ class LocatorsSearch(object):
 
 
 class LocatorsCompaniesPage(object):
+    """Locators for company page"""
     STATUS_APPROVED = (By.CSS_SELECTOR, 'i[class="fa fa-thumbs-up"]')
     STATUS_NOT_APPROVED = (By.CSS_SELECTOR, 'i[class="fa fa-times"]')
     STATUS_BLOCKED = (By.CSS_SELECTOR, 'i[class="fa fa-lock"]')
@@ -95,6 +101,7 @@ class LocatorsCompaniesPage(object):
 
 
 class LocatorsCreateCompanyPage(object):
+    """Locators for the Create Company page"""
     CREATE_COMPANY_TAB = (By.CSS_SELECTOR, "a[class='navbar-brand'][href='/createCompany']")
     COMPANY_NAME_TEXBOX = (By.ID, "name")
     COMPANY_EDRPOU_TEXBOX = (By.ID, "edrpou")
@@ -113,10 +120,10 @@ class LocatorsCreateCompanyPage(object):
 
     COMPANY_FIELDS = ["name", "edrpou", "description", "website", "email", "phoneNumber", "country", "city", "street",
                       "building", "apartment", "zipCode"]
-    MY_COMPANIES = (By.CSS_SELECTOR, "a[href='/companies/my']")
 
 
 class LocatorsUpdateCompanyPage(LocatorsCreateCompanyPage):
+    """Locators for the Updating Company Page"""
     INPUT_FIELD = (By.CSS_SELECTOR, "input[id = 'customFile']")
     UPDATE_PHOTO_BUTTON = (By.CSS_SELECTOR, "input[class='btn btn-primary']")
     UPDATE_COMPANY_BUTTON = (By.CSS_SELECTOR, "button[class='btn btn-success']")
@@ -124,15 +131,19 @@ class LocatorsUpdateCompanyPage(LocatorsCreateCompanyPage):
 
 
 class LocatorsMyCompaniesPage(object):
+    """Lcators for the 'My companies' page"""
     MY_COMPANIES = (By.CSS_SELECTOR, "a[href='/companies/my']")
     CREATE_COMPANY_BUTTON = (By.CSS_SELECTOR, "a[href='/createCompany']")
     COMPANY_DETAIL_BUTTON_SOFTSERVE = (By.CSS_SELECTOR, "a[href ='/viewCompany/1']")
-    TABLE_BODY = (By.CSS_SELECTOR, "table>tbody")
+    TABLE_BODY = (By.CSS_SELECTOR, ".table.table-striped tbody")
     DELETE_COMPANY_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-trash']")
     COMPANY_UPDATE_BUTTON = (By.CSS_SELECTOR, "a>i[class='fa fa-edit']")
+    TD = (By.CSS_SELECTOR, "table > tbody td")
 
 
 class LocatorsViewCompany(object):
+    """View company page locators"""
+    DESCRIPTION_OF_CLAIM = 'description'
     CREATE_VACANCY_BUTTON = (By.CSS_SELECTOR, "a[href='/createVacancy/1']")
     VACANCY_DETAILS_BUTTON = (By.PARTIAL_LINK_TEXT, "View details")
     SIMPLE_VACANCY_DIV = (By.CSS_SELECTOR, "div.simpleVacancy")
@@ -143,6 +154,7 @@ class LocatorsViewCompany(object):
 
 
 class LocatorsCreateVacancyPage(object):
+    """Create vacancy page locators"""
     VACANCY_DESCRIPTION_TEXTBOX = (By.ID, "description")
     VACANCY_POSITION_TEXTBOX = (By.ID, "position")
     VACANCY_EMPLOYMENT_DROPBOX = (By.CSS_SELECTOR, "select>option[value='HOURLY']")
@@ -155,6 +167,7 @@ class LocatorsCreateVacancyPage(object):
 
 
 class LocatorsUserPage:
+    """Locators for the user page"""
     UPDATE_PROFILE = (By.CSS_SELECTOR, "input[value='Update Profile']")
     user_fields = {
         'FIRST_NAME': (By.ID, 'firstName'),
@@ -172,17 +185,20 @@ class LocatorsUserPage:
 
 
 class LocatorsForgotPassword:
+    """Locators for the renewing password"""
     EMAIL = (By.ID, 'username')
     SUBMIT_BUTTON = (By.CSS_SELECTOR, 'input[value="Submit"]')
 
 
 class LocatorsConfirmPassword:
+    """Locators for the confirming password"""
     NEW_PASSWORD = (By.ID, 'newPassword')
     CONFIRMATION_PASSWORD = (By.ID, 'confirmPassword')
     REGISTER_BUTTON = (By.CSS_SELECTOR, 'input[value="Register"]')
 
 
 class LocatorsPreviewResume(object):
+    """Locators for previewing resume"""
     BUTTONS = (By.CSS_SELECTOR, 'button[class="btn btn-success"]')
     MESSAGE = (By.CSS_SELECTOR, 'div[class="wrap"]>p')
     PREVIEW_PDF_BUTTON = (By.CSS_SELECTOR, 'button[class="btn btn-success"]')
@@ -190,22 +206,26 @@ class LocatorsPreviewResume(object):
 
 
 class LocatorsYourResume(object):
+    """Resume locators"""
     SHOW_ALL_INFO_BUTTON = (By.CSS_SELECTOR, 'a[href="/update/2"]')
 
 
 class LocatorsViewVacancy(object):
+    """Locators for the view vacancy page"""
     SEND_RESUME_BUTTON = (By.CSS_SELECTOR, 'a[class="btn btn-success"]')
     SHOW_COMPANY_BUTTON = (By.CSS_SELECTOR, 'a[href="/viewCompany/1"]')
     TEXT = (By.CSS_SELECTOR, "div[class='simpleVacancy']>td")
 
 
 class LocatorsEditResume(object):
+    """Locators for the resume editing"""
     POSITION_FIELD = (By.ID, 'position')
     PREVIEW_PDF_BUTTON = (By.CSS_SELECTOR, 'button[class="btn btn-success"]')
     GET_TEXT_FROM_FIELD = 'ng-reflect-model'
 
 
 class LocatorsCompaniesDetailsPage:
+    """Locators for the company details page"""
     CREATE_CLAIM_BTN = (By.CSS_SELECTOR, 'button[class="btn btn-warning"]')
     CANCEL_CLAIM_BTN = (By.CSS_SELECTOR, 'input[value="Cancel"]')
     SEND_CLAIM_BTN = (By.CSS_SELECTOR, 'input[class="btn btn-danger"]')
