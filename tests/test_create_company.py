@@ -4,7 +4,7 @@ from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Creation of the company")
-def test_create_company(app, make_screen):
+def test_create_company(app):
     """Creation of the company"""
 
     with allure.step("Login"):

@@ -3,7 +3,7 @@ import allure
 
 
 @allure.story('Admin features')
-def test_admin_create_claim(app, make_screen):
+def test_admin_create_claim(app):
     """ Test-case that create claim to company"""
     with allure.step('Log in'):
         app.header.select_option('Log in')

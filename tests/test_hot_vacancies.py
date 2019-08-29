@@ -4,7 +4,7 @@ from data_tests import guest_data
 
 
 @allure.feature("HotVacancies page")
-def test_hot_vacancies(app, make_screen):
+def test_hot_vacancies(app):
     """View hot vacancies page"""
     with allure.step('Go to hot vacancies page'):
         app.hot_vacancies_page.view_details()

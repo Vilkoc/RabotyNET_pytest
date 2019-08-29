@@ -9,7 +9,7 @@ import allure
     ('user@gmail.com', 'user', 'Create company'),
     ('cowner@gmail.com', 'cowner', 'My companies')
 ])
-def test_login_logout(app, make_screen, user, password, expected):
+def test_login_logout(app, user, password, expected):
     """ Test case for user login.
         Try to login for each user"""
     with allure.step("Log in"):

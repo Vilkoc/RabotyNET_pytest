@@ -9,7 +9,7 @@ MOCK_CONFIRMATION_LINK = \
 
 
 @allure.feature('Forgot password')
-def test_forgot_password(app, make_screen):
+def test_forgot_password(app):
     """ Test case to renew password using email"""
     with allure.step("Login"):
         app.header.click_icon()

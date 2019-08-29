@@ -162,7 +162,7 @@ class LocatorsCreateVacancyPage(object):
     VACANCY_CURRRENCY_DROPBOX = (By.CSS_SELECTOR, "select>option[value='USD']")
     ADD_REQUIREMENT_BUTTON = (By.CSS_SELECTOR, "button[class='btn btn-success']")
     VAC_REQUIREMENT_TEXTBOX = (By.CSS_SELECTOR, "input[id = 'description'][placeholder = 'Input requirement']")
-    VACANCY_CREATE_BUTTON = (By.CSS_SELECTOR, "button[class='btn btn-primary'][type='submit']")
+    VACANCY_CREATE_BUTTON = (By.CSS_SELECTOR, "button[type='submit']")
     VACANCY_FIELDS = ["description", "position", "salary"]
 
 

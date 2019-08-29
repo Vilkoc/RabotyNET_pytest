@@ -1,10 +1,10 @@
 """This module allows you to automate the creation of the vacancy"""
 import allure
 from data_tests.cowner_data import CownerData
-
+import time
 
 @allure.feature("Creation of the vacancy")
-def test_create_vacancy(app, make_screen):
+def test_create_vacancy(app):
     """Creation of the vacancy"""
 
     with allure.step("Login"):
@@ -24,6 +24,7 @@ def test_create_vacancy(app, make_screen):
     with allure.step("Add requirements"):
         app.create_vacancy_page.click_add_requirement()
         app.create_vacancy_page.enter_requirements(CownerData.REQUIREMENTS)
+        time.sleep(1)
         app.create_vacancy_page.click_vacancy_create()
     with allure.step("Read data"):
         app.view_company_page.view_vacancy_details(CownerData.VACANCY_NAME)

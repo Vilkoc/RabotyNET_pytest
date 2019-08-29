@@ -3,7 +3,7 @@ import allure
 
 
 @allure.story('Admin features')
-def test_admin_companies_presence(app, make_screen):
+def test_admin_companies_presence(app):
     """ Test-case that check visibility of companies"""
     with allure.step('Log in'):
         app.header.select_option('Log in')

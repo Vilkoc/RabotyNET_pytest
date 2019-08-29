@@ -1,9 +1,11 @@
 """This module allows you to provide search"""
 import allure
+import pytest
 
 
 @allure.feature("Search page")
-def test_search_button(app, make_screen):
+@pytest.mark.skip(reason='skip due to: server crashing')
+def test_search_button(app):
     """Provide search"""
     with allure.step('Go to vacancies page'):
         app.search_page.search_button_click()

@@ -4,7 +4,7 @@ from data_tests.cowner_data import CownerData
 
 
 @allure.feature("Deleting of the company")
-def test_delete_company(app, make_screen):
+def test_delete_company(app):
     """Deleting of the company"""
 
     with allure.step("Login"):

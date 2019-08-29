@@ -8,7 +8,7 @@ MOCK_CONFIRMATION_LINK = 'http://localhost:4200/users/auth/confirm?token=3e83667
 
 
 @allure.feature('Sign up')
-def test_sign_up(app, make_screen):
+def test_sign_up(app):
     """ Test case for sign up user. """
     app.header.click_icon()
     app.header.click_log_in()
@@ -35,7 +35,7 @@ def test_sign_up(app, make_screen):
 
 @allure.feature('Sign up')
 @allure.story('Sign up negative')
-def test_sign_up_negative_email(app, make_screen):
+def test_sign_up_negative_email(app):
     """ Test case for sign up user.
     Negative. Using email already registered user"""
     app.header.click_icon()
@@ -54,7 +54,7 @@ def test_sign_up_negative_email(app, make_screen):
 
 @allure.feature('Sign up')
 @allure.story('Sign up negative')
-def test_sign_up_negative_password(app, make_screen):
+def test_sign_up_negative_password(app):
     """ Test case for sign up user.
     Negative. Using incorrect password """
     app.header.click_icon()
@@ -73,7 +73,7 @@ def test_sign_up_negative_password(app, make_screen):
 
 @allure.feature('Sign up')
 @allure.story('Sign up negative')
-def test_sign_up_negative_email_wrong(app, make_screen):
+def test_sign_up_negative_email_wrong(app):
     """ Test case for sign up user.
     Negative. Using incorrect email """
     app.header.click_icon()
@@ -92,7 +92,7 @@ def test_sign_up_negative_email_wrong(app, make_screen):
 
 @allure.feature('Sign up')
 @allure.story('Sign up negative')
-def test_sign_up_negative_password_mismatch(app, make_screen):
+def test_sign_up_negative_password_mismatch(app):
     """ Test case for sign up user.
     Negative. Using different password and matching password """
     app.header.click_icon()
