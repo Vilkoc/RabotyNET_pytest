@@ -15,7 +15,4 @@ def test_delete_company(app, make_screen):
     with allure.step("Delete the company "):
         app.my_companies_page.click_company_delete(CownerData.COMPANY_DELETE)
     with allure.step("Check the result"):
-
-        a =app.my_companies_page.check_company_absence(CownerData.COMPANY_DELETE)
-
-        assert a
+        assert app.my_companies_page.check_company_absence(CownerData.COMPANY_DELETE)
