@@ -4,7 +4,7 @@ import pytest
 
 
 @allure.feature("Search page")
-@pytest.mark.skip(reason='skip due to: server crashing')
+# @pytest.mark.skip(reason='skip due to: server crashing')
 def test_search_button(app):
     """Provide search"""
     with allure.step('Go to vacancies page'):
