@@ -3,6 +3,7 @@ import allure
 from data_tests.cowner_data import CownerData
 import time
 
+
 @allure.feature("Creation of the vacancy")
 def test_create_vacancy(app):
     """Creation of the vacancy"""

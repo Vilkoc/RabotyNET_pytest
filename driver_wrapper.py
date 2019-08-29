@@ -1,5 +1,6 @@
 """This module contains methods that are wrappers for drivers methods"""
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import ElementClickInterceptedException, StaleElementReferenceException
 from selenium.webdriver.support.wait import WebDriverWait
 from config import TIMEOUT
 import time
@@ -31,13 +32,16 @@ class DriverWrapper(object):
 
     def click_element(self, locator, elem_number=0):
         """Clicks on the element with number elem_number"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, self.default_timeout,ignored_exceptions=ElementClickInterceptedException).\
+        until(EC.element_to_be_clickable(locator))
         elements = self.get_elements(locator)
         elements[elem_number].click()
 
     def click_element_by_text(self, locator, text_value):
         """Clicks on the element with text attribute text_value"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
+        #ignored_exceptions = StaleElementReferenceException
+        WebDriverWait(self.driver, self.default_timeout, ignored_exceptions=StaleElementReferenceException).\
+            until(EC.element_to_be_clickable(locator))
         elements = self.get_elements(locator)
         for element in elements:
             if element.text == text_value:
@@ -61,7 +65,8 @@ class DriverWrapper(object):
 
     def get_attr_value(self, locator, attr):
         """Get attribute value of the element"""
-        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, self.default_timeout, ignored_exceptions=StaleElementReferenceException)\
+            .until(EC.element_to_be_clickable(locator))
         element = self.get_element(locator)
         return element.get_attribute(attr)
 
