@@ -1,6 +1,7 @@
 """This module contains project fixtures"""
 import pytest
 import allure
+from time import sleep
 from application import Application
 from driver_wrapper import DriverWrapper
 from driver_selection import WebdriverSelection
@@ -14,7 +15,9 @@ from utilities.db import restart_tomcat
 def prep_db(worker_id):
     """Prepares DB for running"""
     if worker_id == 'gw0' or worker_id == 'master':
+        restart_tomcat()
         prepare_db()
+    sleep(20)
 
 
 @pytest.fixture(scope='function')
@@ -56,11 +59,3 @@ def get_to_user_profile(app):
     app.header.select_option('Log in')
     app.sign_in_page.login('USER')
     app.header.select_option('Profile')
-
-
-@pytest.fixture(scope='session')
-def restart_tomcat_func(request):
-    def restart():
-        restart_tomcat()
-
-    request.addfinalizer(restart)
