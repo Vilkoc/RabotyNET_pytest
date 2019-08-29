@@ -11,16 +11,16 @@ def test_send_resume(app):
         app.sign_in_page.login('USER')
 
     with allure.step('Go to all vacancy page'):
-        app.header.go_to_allVacancies()
+        app.header.go_to_all_vacancies()
 
     with allure.step('View vacancy details'):
-        app.vacancies_page.click_viewDetails_button()
+        app.vacancies_page.click_view_details_button()
 
     with allure.step('Go to preview resume page'):
-        app.view_vacancy_page.click_sendResume_button()
+        app.view_vacancy_page.click_send_resume_button()
 
     with allure.step('Send resume'):
-        app.preview_resume_page.click_sendEmail_button()
+        app.preview_resume_page.click_send_email_button()
 
     with allure.step('Check result'):
         msg = app.preview_resume_page.confirmation_message()
