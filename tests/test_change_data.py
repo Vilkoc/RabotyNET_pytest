@@ -3,7 +3,7 @@ import allure
 
 
 @allure.feature('Changing data')
-def test_change_data(app, make_screen):
+def test_change_data(app):
     """Change data in "Position" field"""
     with allure.step('Log in'):
         app.header.select_option('Log in')
