@@ -14,4 +14,3 @@ def test_all(app, get_to_user_profile, field):
         button_disabled = app.user_profile_page.disabled_update_profile_button()
         assert not valid_entry
         assert button_disabled
-        #app.header.select_option('Log out')
