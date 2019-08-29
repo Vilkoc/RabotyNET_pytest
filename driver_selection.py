@@ -9,7 +9,8 @@ class WebdriverSelection():
         if browser_name.lower() == 'chrome':
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument("--incognito")
-            return webdriver.Chrome(chrome_options=chrome_options)
+
+            return webdriver.Chrome("D:/Program Files (x86)/chromedriver.exe")
         elif browser_name.lower() == 'firefox':
             return webdriver.Firefox()
         elif browser_name.lower() == 'opera':
