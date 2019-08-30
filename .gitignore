@@ -13,7 +13,7 @@ sample.png
 tests/sample.png
 allure-results/
 .pytest_cache
-
+.gitignore
 
 
 
