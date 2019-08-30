@@ -44,8 +44,7 @@ class CreateVacancyPage():
 
     def click_vacancy_create(self):
         """Clacks on the 'Create' vacancy that saves all vacancy data"""
-        self.wait.until(EC.element_to_be_clickable(self.locators.VACANCY_CREATE_BUTTON))
-        self.browser.click_element(self.locators.VACANCY_CREATE_BUTTON)
+        self.browser.get_element(self.locators.VACANCY_CREATE_BUTTON).click()
 
     def read_vacancy_data(self):
         """Extracts text data from specified textbox"""
