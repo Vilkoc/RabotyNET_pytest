@@ -7,10 +7,7 @@ from locators import LocatorsYourResume
 
 class Header:
     """This is navigation panel present for all pages"""
-<<<<<<< HEAD
 
-=======
->>>>>>> 03e74acc2a367aa8536247c1003d544265edf86a
     def __init__(self, browser):
         self.browser = browser
         self.locators = LocatorsHeader
@@ -49,7 +46,6 @@ class Header:
         if pick_item not in values:
             raise Exception('Incorrect value for click_dropdown function')
         self.click_icon()
-<<<<<<< HEAD
         if pick_item == 'Profile':
             while self.check_dropdown():
                 self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
@@ -60,12 +56,10 @@ class Header:
                 self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
             else:
                 self.click_icon()
-=======
         while self.check_dropdown():
             self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
         else:
             self.click_icon()
->>>>>>> 03e74acc2a367aa8536247c1003d544265edf86a
 
     def person_verify(self, person):
         """Returns True if the number of elements on the navbar equals to the person_criteria"""
