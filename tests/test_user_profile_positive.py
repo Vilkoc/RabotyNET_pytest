@@ -15,4 +15,4 @@ def test_all(app, get_to_user_profile, field):
         read = app.user_profile_page.read_data_textbox(field)
         assert valid_entry
         assert read == entry[field]
-        app.header.select_option('Log out')
+

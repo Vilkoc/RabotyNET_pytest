@@ -1,6 +1,7 @@
 """This module contains methods that are wrappers for drivers methods"""
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import ElementClickInterceptedException, StaleElementReferenceException
+from selenium.common.exceptions import ElementClickInterceptedException, \
+    StaleElementReferenceException, NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from config import TIMEOUT
 import time
@@ -30,18 +31,30 @@ class DriverWrapper(object):
             if element.text == locator[1]:
                 return element
 
+    def patch_selenium(included_exceptions):
+        """This is decorator to patch some methods which fall upon stale webelement"""
+        def decorator_argsless(func):
+            def wrapper(*args):
+                attempts = 0
+                while attempts < 2:
+                    try:
+                        return func(*args)
+                    except included_exceptions:
+                        attempts += 1
+            return wrapper
+        return decorator_argsless
+
+    @patch_selenium((StaleElementReferenceException, ElementClickInterceptedException))
     def click_element(self, locator, elem_number=0):
         """Clicks on the element with number elem_number"""
-        WebDriverWait(self.driver, self.default_timeout,ignored_exceptions=ElementClickInterceptedException).\
-        until(EC.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
         elements = self.get_elements(locator)
         elements[elem_number].click()
 
+    @patch_selenium(StaleElementReferenceException)
     def click_element_by_text(self, locator, text_value):
         """Clicks on the element with text attribute text_value"""
-        #ignored_exceptions = StaleElementReferenceException
-        WebDriverWait(self.driver, self.default_timeout, ignored_exceptions=StaleElementReferenceException).\
-            until(EC.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
         elements = self.get_elements(locator)
         for element in elements:
             if element.text == text_value:
@@ -63,10 +76,10 @@ class DriverWrapper(object):
                 if element.text == text_value:
                     element.send_keys(keys)
 
+    @patch_selenium((StaleElementReferenceException, NoSuchElementException))
     def get_attr_value(self, locator, attr):
         """Get attribute value of the element"""
-        WebDriverWait(self.driver, self.default_timeout, ignored_exceptions=StaleElementReferenceException)\
-            .until(EC.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, self.default_timeout).until(EC.element_to_be_clickable(locator))
         element = self.get_element(locator)
         return element.get_attribute(attr)
 
