@@ -68,6 +68,10 @@ class Header:
                 self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
             else:
                 self.click_icon()
+        while self.check_dropdown():
+            self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        else:
+            self.click_icon()
 
 
     def person_verify(self, person):
