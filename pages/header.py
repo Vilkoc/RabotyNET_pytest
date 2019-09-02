@@ -58,10 +58,16 @@ class Header:
         if pick_item not in values:
             raise Exception('Incorrect value for click_dropdown function')
         self.click_icon()
-        while self.check_dropdown():
-            self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        if pick_item == 'Profile':
+            while self.check_dropdown():
+                self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+            else:
+                self.click_icon()
         else:
-            self.click_icon()
+            if self.check_dropdown():
+                self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+            else:
+                self.click_icon()
 
 
     def person_verify(self, person):
