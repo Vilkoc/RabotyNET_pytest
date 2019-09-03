@@ -1,6 +1,6 @@
 """This module contains login methods for any type of user"""
 from locators import LocatorsSignIn
-from credentials import Credentials
+from credentials import Credentials_extended
 
 
 class SignInPage:
@@ -23,7 +23,7 @@ class SignInPage:
 
     def login(self, person):
         """Logins any person. It starts from homepage for unlogined person"""
-        self.enter_credentials(*Credentials[person])
+        self.enter_credentials(*Credentials_extended[person])
         self.click_sign_in()
 
     def enter_sign_in_email(self, email):

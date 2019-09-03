@@ -3,6 +3,12 @@
 Credentials = {
     'USER': ('user@gmail.com', 'user'),
     'COWNER': ('cowner@gmail.com', 'cowner'),
+    'ADMIN': ('admin@gmail.com', 'admin')
+}
+
+Credentials_extended = {
+    'USER': ('user@gmail.com', 'user'),
+    'COWNER': ('cowner@gmail.com', 'cowner'),
     'ADMIN': ('admin@gmail.com', 'admin'),
     'USER_1': ('user_1@gmail.com', 'user'),
     'USER_2': ('user_2@gmail.com', 'user'),
