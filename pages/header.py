@@ -39,7 +39,7 @@ class Header:
         log_out = self.browser.wait_element_with_text(self.locators.LOG_OUT, "Log out")
         return log_out.text == 'Log out'
 
-    def select_option(self, pick_item):
+    def select_option_for_all(self, pick_item):
         """The pick_item is default string parameter which accepts only 'Log in',
         'Profile', 'Log out' values"""
         values = ('Log in', 'Profile', 'Log out')
@@ -47,6 +47,28 @@ class Header:
             raise Exception('Incorrect value for click_dropdown function')
         self.click_icon()
         if self.check_dropdown():
+            self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+        else:
+            self.click_icon()
+
+    def select_option(self, pick_item):
+        """The pick_item is default string parameter which accepts only 'Log in',
+        'Profile', 'Log out' values"""
+        values = ('Log in', 'Profile', 'Log out')
+        if pick_item not in values:
+            raise Exception('Incorrect value for click_dropdown function')
+        self.click_icon()
+        if pick_item == 'Profile':
+            while self.check_dropdown():
+                self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+            else:
+                self.click_icon()
+        else:
+            if self.check_dropdown():
+                self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
+            else:
+                self.click_icon()
+        while self.check_dropdown():
             self.browser.click_element_by_text(self.locators.DROPDOWN, pick_item)
         else:
             self.click_icon()
