@@ -7,10 +7,10 @@ class WebdriverSelection():
     @staticmethod
     def get_webdriver(browser_name):
         if browser_name.lower() == 'chrome':
-            chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument("--incognito")
+            options = webdriver.ChromeOptions()
+            options.add_argument("--incognito")
 
-            return webdriver.Chrome(chrome_options=chrome_options)
+            return webdriver.Chrome(options=options)
 
         elif browser_name.lower() == 'firefox':
             return webdriver.Firefox()
