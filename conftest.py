@@ -8,16 +8,16 @@ from driver_selection import WebdriverSelection
 from config import URL, TIMEOUT, WEBDRIVER
 from utilities.db import prepare_db
 from allure_commons.types import AttachmentType
-from utilities.db import restart_tomcat
+# from utilities.db import restart_tomcat
 
 
-@pytest.fixture(scope='session', autouse=True)
-def prep_db(worker_id):
-    """Prepares DB for running"""
-    if worker_id == 'gw0' or worker_id == 'master':
-        restart_tomcat()
-        prepare_db()
-    sleep(20)
+# @pytest.fixture(scope='session', autouse=True)
+# def prep_db(worker_id):
+#     """Prepares DB for running"""
+#     if worker_id == 'gw0' or worker_id == 'master':
+#         restart_tomcat()
+#         prepare_db()
+#     sleep(20)
 
 
 @pytest.fixture(scope='function')
